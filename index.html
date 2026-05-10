@@ -986,9 +986,8 @@
       <h4>Dispatch</h4>
       <p>New work, events, and occasional writing. No noise.</p>
     </div>
-    <div class="newsletter-input-row">
-      <input type="email" placeholder="your@email.com">
-      <button class="btn">Subscribe</button>
+    <div class="newsletter-mailerlite">
+      <div class="ml-embedded" data-form="hLF69d"></div>
     </div>
   </div>
 </div>
@@ -1143,31 +1142,32 @@
       </div>
     </div>
 
-    <div class="inquiry-form" id="shop-form">
+    <form class="inquiry-form" id="shop-form" action="https://formspree.io/f/xqengyqe" method="POST">
+      <input type="hidden" name="_subject" value="Print Enquiry — Victory Sauce">
       <h3>Print Enquiry</h3>
       <p class="form-sub">Tell me what you're interested in and where you are — I'll get back to you with options and a shipping quote.</p>
       <div class="form-row">
         <label>Your Name</label>
-        <input type="text" placeholder="Name">
+        <input type="text" name="name" placeholder="Name" required>
       </div>
       <div class="form-row">
         <label>Email</label>
-        <input type="email" placeholder="email@example.com">
+        <input type="email" name="email" placeholder="email@example.com" required>
       </div>
       <div class="form-row">
         <label>Which image?</label>
-        <input type="text" placeholder="Title or describe the image">
+        <input type="text" name="image" placeholder="Title or describe the image" required>
       </div>
       <div class="form-row">
         <label>Your Country</label>
-        <input type="text" placeholder="For shipping estimate">
+        <input type="text" name="country" placeholder="For shipping estimate" required>
       </div>
       <div class="form-row">
         <label>Anything else</label>
-        <textarea placeholder="Size preferences, questions, etc."></textarea>
+        <textarea name="message" placeholder="Size preferences, questions, etc."></textarea>
       </div>
-      <button class="btn btn-primary" style="width:100%;">Send Enquiry</button>
-    </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Send Enquiry</button>
+    </form>
   </div>
 </div>
 
@@ -1273,18 +1273,19 @@
           <span class="contact-link-value">lu.ma/victorysauce</span>
         </a>
       </div>
-      <div class="contact-form">
+      <form class="contact-form" action="https://formspree.io/f/xqengyqe" method="POST">
+        <input type="hidden" name="_subject" value="Contact — Victory Sauce">
         <div class="form-row">
           <label>Name</label>
-          <input type="text" placeholder="Your name">
+          <input type="text" name="name" placeholder="Your name" required>
         </div>
         <div class="form-row">
           <label>Email</label>
-          <input type="email" placeholder="your@email.com">
+          <input type="email" name="email" placeholder="your@email.com" required>
         </div>
         <div class="form-row">
           <label>Subject</label>
-          <select>
+          <select name="subject">
             <option value="">Select a topic</option>
             <option>Commission</option>
             <option>Print enquiry</option>
@@ -1296,10 +1297,10 @@
         </div>
         <div class="form-row">
           <label>Message</label>
-          <textarea placeholder="Tell me what you're thinking..."></textarea>
+          <textarea name="message" placeholder="Tell me what you're thinking..." required></textarea>
         </div>
-        <button class="btn btn-primary" style="width:100%;">Send Message</button>
-      </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+      </form>
     </div>
   </div>
 </div>
@@ -1371,5 +1372,9 @@
     a.addEventListener('click', e => e.preventDefault());
   });
 </script>
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2333565');
+  </script>
 </body>
 </html>
