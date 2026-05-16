@@ -28,6 +28,7 @@
     font-size: 16px;
     line-height: 1.6;
     cursor: default;
+    overflow-x: hidden;
   }
 
   /* ── NOISE OVERLAY ── */
@@ -492,6 +493,12 @@
   .print-img {
     aspect-ratio: 4/3;
     width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+  .print-img.img-placeholder {
+    height: auto;
+    min-height: 260px;
   }
   .print-info {
     padding: 16px;
@@ -1188,7 +1195,6 @@
 
 <!-- ══ SHOP ══ -->
 <div class="page" id="shop">
-  <div style="padding: 0 40px;">
     <div class="page-header">
       <h1>Shop</h1>
       <p class="sub">Fine Art Prints · Made to Order</p>
@@ -1250,7 +1256,6 @@
       </div>
       <button type="submit" class="btn btn-primary" style="width:100%;">Send Enquiry</button>
     </form>
-  </div>
 </div>
 
 <!-- ══ EVENTS ══ -->
