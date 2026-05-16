@@ -1107,27 +1107,27 @@
       <button class="filter-btn">Portrait</button>
     </div>
     <div class="gallery-masonry">
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+      <div class="gallery-item" data-category="infrared" data-title="Bubble Stars, Lisbon, 2024" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
         <img src="images/Bubble_Stars.jpg" alt="A woman walks across Praça do Comércio while staring at bubbles floating by. Captured by an infrared sensitive camera that creates unnatural colors.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+      <div class="gallery-item" data-category="infrared" data-title="Empty Protest, Lisbon, 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
         <img src="images/Empty_Protest.jpg" alt="A group of protestors walk with empty signs and flags during a demonstration in Lisbon. The infrared camera cannot see the printed images, so they appear empty.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+      <div class="gallery-item" data-category="infrared" data-title="Exhale, Lisbon, 2025" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
         <img src="images/Exhale.jpg" alt="An older man in Barreiro sits by the Tagus staring outward. The clouds behind him almost appear like he is breathing them out.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+      <div class="gallery-item" data-category="infrared" data-title="Smokestack, Barreiro, Portugal, 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
         <img src="images/Smokestack.jpg" alt="A large smokestack stands alone in Barreiro, Portugal against a sky darkened by infrared. A light flare normally hidden is easily visible in the infrared light.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+      <div class="gallery-item" data-category="infrared" data-title="Empty Flag, Lisbon, 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
         <img src="images/Empty_Flag.jpg" alt="A flag is waved against a cloudy sky in Lisbon. The infrared camera cannot see the image printed on the flag, so it appears empty.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+      <div class="gallery-item" data-category="infrared" data-title="Arraiais Populares de Lisboa, 2025" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
         <img src="images/Arraiais_Populares_de_Lisboa.jpg" alt="A street has been taken over for a block party. People are getting ready for the festivities.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
@@ -1461,10 +1461,10 @@
   });
 
   // Lightbox
-  function openLightbox(src, alt) {
+  function openLightbox(src, alt, title) {
     document.getElementById('lightbox-image').src = src;
     document.getElementById('lightbox-image').alt = alt;
-    document.getElementById('lightbox-caption').textContent = alt;
+    document.getElementById('lightbox-caption').textContent = title;
     document.getElementById('lightbox').classList.add('open');
   }
   function closeLightbox() {
