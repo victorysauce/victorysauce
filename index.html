@@ -475,17 +475,20 @@
 
   .print-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    margin-bottom: 60px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+    isolation: isolate;
   }
 
   .print-card {
     background: #111;
     cursor: pointer;
     transition: transform 0.2s;
+    position: relative;
+    z-index: 0;
   }
-  .print-card:hover { transform: scale(1.01); }
+  .print-card:hover { transform: scale(1.01); z-index: 1; }
   .print-img {
     aspect-ratio: 4/3;
     width: 100%;
@@ -520,6 +523,8 @@
     border: 1px solid rgba(255,255,255,0.08);
     padding: 40px;
     position: relative;
+    z-index: 10;
+    isolation: isolate;
   }
   .inquiry-form::before {
     content: '';
@@ -796,12 +801,12 @@
     font-size: 16px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(242,237,227,0.3);
+    color: rgba(242,237,227,0.6);
   }
-  .footer-logo span { color: var(--pink); opacity: 0.6; }
+  .footer-logo span { color: var(--pink); opacity: 0.8; }
   .footer-copy {
     font-size: 12px;
-    color: rgba(242,237,227,0.2);
+    color: rgba(242,237,227,0.5);
     letter-spacing: 0.04em;
   }
   .footer-links {
@@ -813,7 +818,7 @@
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(242,237,227,0.25);
+    color: rgba(242,237,227,0.55);
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -870,7 +875,7 @@
 
   /* ── NEWSLETTER STRIP ── */
   .newsletter-strip {
-    background: var(--blue);
+    background: var(--teal);
     padding: 48px 40px;
     display: flex;
     align-items: center;
@@ -884,11 +889,11 @@
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    color: var(--cream);
+    color: var(--black);
   }
   .newsletter-strip p {
     font-size: 13px;
-    color: rgba(242,237,227,0.65);
+    color: rgba(13,13,13,0.7);
     margin-top: 4px;
   }
   .newsletter-input-row {
@@ -899,24 +904,24 @@
   }
   .newsletter-input-row input {
     flex: 1;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.25);
     border-right: none;
-    color: var(--cream);
+    color: var(--black);
     font-family: var(--dm);
     font-size: 14px;
     padding: 12px 16px;
     outline: none;
   }
-  .newsletter-input-row input::placeholder { color: rgba(242,237,227,0.35); }
-  .newsletter-input-row input:focus { background: rgba(255,255,255,0.15); }
+  .newsletter-input-row input::placeholder { color: rgba(13,13,13,0.5); }
+  .newsletter-input-row input:focus { background: rgba(0,0,0,0.2); }
   .newsletter-input-row .btn {
-    background: var(--cream);
-    color: var(--blue);
+    background: var(--black);
+    color: var(--cream);
     padding: 12px 24px;
     white-space: nowrap;
   }
-  .newsletter-input-row .btn:hover { background: var(--teal); color: var(--black); }
+  .newsletter-input-row .btn:hover { background: var(--blue); color: var(--cream); }
 
 
   /* ── MAILERLITE OVERRIDES ── */
@@ -935,10 +940,10 @@
     display: none !important;
   }
   .newsletter-mailerlite .ml-form-fieldRow input[type="email"] {
-    background: rgba(255,255,255,0.1) !important;
-    border: 1px solid rgba(255,255,255,0.2) !important;
+    background: rgba(0,0,0,0.15) !important;
+    border: 1px solid rgba(0,0,0,0.25) !important;
     border-radius: 0 !important;
-    color: #F2EDE3 !important;
+    color: var(--black) !important;
     font-family: 'DM Sans', sans-serif !important;
     font-size: 14px !important;
     padding: 12px 16px !important;
@@ -947,7 +952,7 @@
     width: 100% !important;
   }
   .newsletter-mailerlite .ml-form-fieldRow input[type="email"]::placeholder {
-    color: rgba(242,237,227,0.35) !important;
+    color: rgba(13,13,13,0.5) !important;
   }
   .newsletter-mailerlite .ml-form-checkboxRow {
     padding: 8px 0 !important;
@@ -955,17 +960,17 @@
   .newsletter-mailerlite .ml-form-checkboxRow label,
   .newsletter-mailerlite .ml-form-checkboxRow p,
   .newsletter-mailerlite .ml-form-checkboxRow span {
-    color: rgba(242,237,227,0.5) !important;
+    color: var(--black) !important;
     font-family: 'DM Sans', sans-serif !important;
     font-size: 12px !important;
   }
   .newsletter-mailerlite .ml-form-checkboxRow input[type="checkbox"] {
-    accent-color: #0EC4B0 !important;
+    accent-color: var(--black) !important;
   }
   .newsletter-mailerlite button[type="submit"],
   .newsletter-mailerlite .ml-form-embedSubmit button {
-    background: #F2EDE3 !important;
-    color: #2448C8 !important;
+    background: var(--black) !important;
+    color: var(--cream) !important;
     font-family: 'Oswald', sans-serif !important;
     font-size: 13px !important;
     letter-spacing: 0.14em !important;
@@ -1022,8 +1027,7 @@
     <div class="zine-tags">
       <span class="ztag ztag-teal">Infrared</span>
       <span class="ztag ztag-pink">Street</span>
-      <span class="ztag ztag-blue">Lisbon</span>
-      <span class="ztag ztag-outline">Fine Art Print</span>
+      <span class="ztag ztag-blue">Lisbon Events</span>
     </div>
     <p class="hero-eyebrow">Photography by Jaki Gerulskis</p>
     <h1 class="hero-title">
@@ -1210,7 +1214,7 @@
           <div class="print-price">POA <span>· enquire for pricing</span></div>
         </div>
       </div>
-      <div class="print-card" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">
+      <div class="print-card" style="grid-column: 1 / -1;" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">
         <div class="print-img ph-lisbon img-placeholder">LX-001</div>
         <div class="print-info">
           <div class="print-title">Alfama · Morning</div>
@@ -1254,9 +1258,9 @@
   <div style="padding: 0 40px;">
     <div class="page-header">
       <h1>Events</h1>
-      <p class="sub">Workshops · Exhibitions · LSPF</p>
+      <p class="sub">Workshops · Exhibitions</p>
     </div>
-    <p class="events-intro" style="margin-top: 32px;">Upcoming workshops, talks, and festival programming. All ticketing via Luma.</p>
+    <p class="events-intro" style="margin-top: 32px;">Upcoming workshops and talks. All ticketing via Luma.</p>
 
     <iframe
       src="https://luma.com/embed/calendar/cal-TgsR1Aeksm0LsCw/events"
@@ -1342,17 +1346,21 @@
       <div class="contact-info">
         <h3>Get in touch</h3>
         <p>For commissions, press enquiries, workshop bookings, or anything else — use the form or reach out directly.</p>
-        <a class="contact-link" href="mailto:jaki@victorysauce.com">
+        <a class="contact-link" href="mailto:hello@victorysauce.com">
           <span class="contact-link-label">Email</span>
-          <span class="contact-link-value">jaki@victorysauce.com</span>
+          <span class="contact-link-value">hello@victorysauce.com</span>
         </a>
-        <a class="contact-link" href="https://instagram.com" target="_blank">
-          <span class="contact-link-label">Instagram</span>
-          <span class="contact-link-value">@victorysauce</span>
+        <a class="contact-link" href="https://instagram.com/victory_sauce" target="_blank">
+          <span class="contact-link-label">Instagram (Photos)</span>
+          <span class="contact-link-value">@victory_sauce</span>
         </a>
-        <a class="contact-link" href="https://lu.ma/cal-TgsR1Aeksm0LsCw" target="_blank">
+        <a class="contact-link" href="https://instagram.com/pouredbyvictory" target="_blank">
+          <span class="contact-link-label">Instagram (Events)</span>
+          <span class="contact-link-value">@pouredbyvictory</span>
+        </a>
+        <a class="contact-link" href="https://luma.com/victorysauce" target="_blank">
           <span class="contact-link-label">Events</span>
-          <span class="contact-link-value">lu.ma/victorysauce</span>
+          <span class="contact-link-value">luma.com/victorysauce</span>
         </a>
       </div>
       <form class="contact-form" action="https://formspree.io/f/xqengyqe" method="POST">
@@ -1395,7 +1403,7 @@
     <a href="#" onclick="showPage('work')">Work</a>
     <a href="#" onclick="showPage('events')">Events</a>
     <a href="#" onclick="showPage('contact')">Contact</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
   </div>
 </footer>
 
