@@ -862,19 +862,24 @@
   }
   .lightbox-close:hover { color: var(--pink); }
   .lightbox-img {
-    max-width: 80vw;
-    max-height: 80vh;
-    width: 600px;
-    height: 400px;
-    background: linear-gradient(135deg, #1a0a2e, #0EC4B0 60%, #E8396A);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-family: var(--oswald);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.2);
-    text-transform: uppercase;
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+  .lightbox-img img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+  #lightbox-caption {
+    margin-top: 12px;
+    font-size: 13px;
+    color: rgba(242,237,227,0.6);
+    font-family: var(--dm);
+    text-align: center;
+    max-width: 600px;
   }
 
   /* ── ANIMATIONS ── */
@@ -1102,27 +1107,27 @@
       <button class="filter-btn">Portrait</button>
     </div>
     <div class="gallery-masonry">
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox()">
+      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
         <img src="images/Bubble_Stars.jpg" alt="A woman walks across Praça do Comércio while staring at bubbles floating by. Captured by an infrared sensitive camera that creates unnatural colors.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox()">
+      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
         <img src="images/Empty_Protest.jpg" alt="A group of protestors walk with empty signs and flags during a demonstration in Lisbon. The infrared camera cannot see the printed images, so they appear empty.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox()">
+      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
         <img src="images/Exhale.jpg" alt="An older man in Barreiro sits by the Tagus staring outward. The clouds behind him almost appear like he is breathing them out.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox()">
+      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
         <img src="images/Smokestack.jpg" alt="A large smokestack stands alone in Barreiro, Portugal against a sky darkened by infrared. A light flare normally hidden is easily visible in the infrared light.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox()">
-        <img src="images/Empty_Flag.jpg" alt="A flag is waived against a cloudy sky in Lisbon. The infrared camera cannot see the image printed on the flag, so it appears empty.">
+      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+        <img src="images/Empty_Flag.jpg" alt="A flag is waved against a cloudy sky in Lisbon. The infrared camera cannot see the image printed on the flag, so it appears empty.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
-      <div class="gallery-item" data-category="infrared" onclick="openLightbox()">
+      <div class="gallery-item" data-category="infrared" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
         <img src="images/Arraiais_Populares_de_Lisboa.jpg" alt="A street has been taken over for a block party. People are getting ready for the festivities.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
@@ -1408,7 +1413,10 @@
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">Close ✕</button>
-  <div class="lightbox-img">Image placeholder</div>
+  <div class="lightbox-img">
+    <img id="lightbox-image" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
 </div>
 
 <script>
@@ -1453,7 +1461,10 @@
   });
 
   // Lightbox
-  function openLightbox() {
+  function openLightbox(src, alt) {
+    document.getElementById('lightbox-image').src = src;
+    document.getElementById('lightbox-image').alt = alt;
+    document.getElementById('lightbox-caption').textContent = alt;
     document.getElementById('lightbox').classList.add('open');
   }
   function closeLightbox() {
