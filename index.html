@@ -3,7 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══ PRIMARY META ══ -->
 <title>Victory Sauce — Photography by Jaki Gerulskis</title>
+<meta name="description" content="Infrared, street, and documentary photography by Jaki Gerulskis. Based in Lisbon. Prints, events, and postcards from wherever Jaki is.">
+<link rel="canonical" href="https://victorysauce.com/">
+
+<!-- ══ OPEN GRAPH ══ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Victory Sauce">
+<meta property="og:url" content="https://victorysauce.com/">
+<meta property="og:title" content="Victory Sauce — Photography by Jaki Gerulskis">
+<meta property="og:description" content="Infrared, street, and documentary photography by Jaki Gerulskis. Based in Lisbon. Prints, events, and postcards from wherever Jaki is.">
+<meta property="og:image" content="https://victorysauce.com/images/Bubble_Stars.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Infrared street photography by Jaki Gerulskis — a woman crosses Praça do Comércio surrounded by floating bubbles, Lisbon">
+
+<!-- ══ TWITTER CARD ══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@victory_sauce">
+<meta name="twitter:title" content="Victory Sauce — Photography by Jaki Gerulskis">
+<meta name="twitter:description" content="Infrared, street, and documentary photography by Jaki Gerulskis. Based in Lisbon. Prints, events, and postcards from wherever Jaki is.">
+<meta name="twitter:image" content="https://victorysauce.com/images/Bubble_Stars.jpg">
+
+<!-- ══ STRUCTURED DATA ══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jaki Gerulskis",
+  "url": "https://victorysauce.com",
+  "sameAs": [
+    "https://instagram.com/victory_sauce",
+    "https://instagram.com/pouredbyvictory",
+    "https://luma.com/victorysauce"
+  ],
+  "jobTitle": "Photographer",
+  "description": "Lisbon-based photographer specializing in infrared, street, portrait, and documentary photography.",
+  "knowsAbout": ["infrared photography", "street photography", "documentary photography", "portrait photography"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Victory Sauce",
+    "url": "https://victorysauce.com"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@victorysauce.com",
+    "contactType": "general"
+  }
+}
+</script>
+
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -1630,6 +1681,73 @@
 </div>
 
 <script>
+  // ── SEO meta per page ──
+  const PAGE_SEO = {
+    home: {
+      title: 'Victory Sauce — Photography by Jaki Gerulskis',
+      description: 'Infrared, street, and documentary photography by Jaki Gerulskis. Based in Lisbon. Prints, events, and postcards from wherever Jaki is.',
+      image: 'https://victorysauce.com/images/Bubble_Stars.jpg',
+      url: 'https://victorysauce.com/',
+    },
+    work: {
+      title: 'Work — Victory Sauce',
+      description: 'Browse Jaki Gerulskis\'s photography portfolio: infrared, street, portraits, and travel postcards shot across Lisbon and Europe.',
+      image: 'https://victorysauce.com/images/Bubble_Stars.jpg',
+      url: 'https://victorysauce.com/work',
+    },
+    about: {
+      title: 'About — Victory Sauce',
+      description: 'Jaki Gerulskis is a Lisbon-based photographer specialising in infrared, street, and documentary work. Commissions and prints available.',
+      image: 'https://victorysauce.com/images/Bubble_Stars.jpg',
+      url: 'https://victorysauce.com/about',
+    },
+    shop: {
+      title: 'Shop Prints — Victory Sauce',
+      description: 'Buy fine art prints by Jaki Gerulskis. Limited edition infrared, street, and travel photography from Lisbon and across Europe.',
+      image: 'https://victorysauce.com/images/Bubble_Stars.jpg',
+      url: 'https://victorysauce.com/shop',
+    },
+    events: {
+      title: 'Events — Victory Sauce',
+      description: 'Photography events, workshops, and pop-ups hosted by Jaki Gerulskis in Lisbon. Upcoming shows, meetups, and community gatherings.',
+      image: 'https://victorysauce.com/images/Bubble_Stars.jpg',
+      url: 'https://victorysauce.com/events',
+    },
+    blog: {
+      title: 'Journal — Victory Sauce',
+      description: 'Field notes and writing from photographer Jaki Gerulskis — shooting Lisbon streets, infrared experiments, and dispatches from the road.',
+      image: 'https://victorysauce.com/images/Bubble_Stars.jpg',
+      url: 'https://victorysauce.com/blog',
+    },
+    'postcards-signup': {
+      title: 'Get a Postcard — Victory Sauce',
+      description: 'Sign up to receive a real printed postcard from Jaki Gerulskis — shot and mailed from whatever city he\'s in, the day he takes them.',
+      image: 'https://victorysauce.com/images/Bubble_Stars.jpg',
+      url: 'https://victorysauce.com/postcards-signup',
+    },
+    contact: {
+      title: 'Contact — Victory Sauce',
+      description: 'Commissions, print enquiries, press, workshop bookings, and collaborations. Get in touch with photographer Jaki Gerulskis.',
+      image: 'https://victorysauce.com/images/Bubble_Stars.jpg',
+      url: 'https://victorysauce.com/contact',
+    },
+  };
+
+  function updateSEO(id) {
+    const seo = PAGE_SEO[id] || PAGE_SEO.home;
+    const setMeta = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
+    document.title = seo.title;
+    setMeta('meta[name="description"]', 'content', seo.description);
+    setMeta('link[rel="canonical"]', 'href', seo.url);
+    setMeta('meta[property="og:title"]', 'content', seo.title);
+    setMeta('meta[property="og:description"]', 'content', seo.description);
+    setMeta('meta[property="og:url"]', 'content', seo.url);
+    setMeta('meta[property="og:image"]', 'content', seo.image);
+    setMeta('meta[name="twitter:title"]', 'content', seo.title);
+    setMeta('meta[name="twitter:description"]', 'content', seo.description);
+    setMeta('meta[name="twitter:image"]', 'content', seo.image);
+  }
+
   // Page routing
   function showPage(id, pushState = true) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1643,6 +1761,7 @@
       const path = id === 'home' ? '/' : '/' + id;
       history.pushState({ page: id }, '', path);
     }
+    updateSEO(id);
     return false;
   }
 
