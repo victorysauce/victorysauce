@@ -891,6 +891,30 @@
     animation: fadeUp 0.4s ease forwards;
   }
 
+  .postcards-cta {
+    background: var(--blue);
+    padding: 48px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 60px;
+  }
+  .postcards-cta h4 {
+    font-family: var(--oswald);
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+  .postcards-cta p {
+    font-size: 14px;
+    color: rgba(242,237,227,0.7);
+    max-width: 480px;
+  }
+
   /* ── NEWSLETTER STRIP ── */
   .newsletter-strip {
     background: var(--teal);
@@ -1103,7 +1127,7 @@
       <button class="filter-btn active">All</button>
       <button class="filter-btn">Infrared</button>
       <button class="filter-btn">Street</button>
-      <button class="filter-btn">Documentary</button>
+      <button class="filter-btn">Postcards</button>
       <button class="filter-btn">Portrait</button>
     </div>
     <div class="gallery-masonry">
@@ -1159,7 +1183,58 @@
         <img src="images/The_Rocker.jpg" alt="Marco Túlio of the Brazilian pop rock band Jota Quest appears lost in the moment. Hair flung back while a spotlight shines directly on him.">
         <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
       </div>
+      <div class="gallery-item" data-category="postcards" data-title="Bright Siena, Italy 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Bright_Siena.jpg" alt="Afternoon light shines brightly on the houses of Siena. While bright green grass and plants frame the bottom of the photo stark blue mixed with white clouds frame the top.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Running in the Park, Firenze, 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Running_in_the_Park.jpg" alt="A young boy is running down a path in the park. His shadow appears to be chasing another shadow.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Misted Tower, Paris, 2025" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Misted_Tower.jpg" alt="The tip of the Eiffel Tower is covered by a rolling mist. Slightly obscured, the various wires and communication devices can still be seen protruding in every direction.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Sunset in Siena, Italy 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Sunset_in_Siena.jpg" alt="Golden light shines from below a line of hills upwards into a grouping of clouds. The hills are covered in shadow while the light transitions upwards from golden orange into a pale blue.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Firenze in Infrared, 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Firenze_in_Infrared.jpg" alt="An infrared shot of the Arno River turns the scene into a duochrome cotton candy landscape. Birds fly over the river while pink flora and fauna are extra visible due to the infrared light spectrum.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Blue Firenze, Italy 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Blue_Firenze.jpg" alt="Poised atop the Duomo in Firenze, a visitor looks out at a city bathed in blue hour light. Light orange, purples, and blues cover the scene both from natural light and artificial city light.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Venezia Sunset, 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Venezia_Sunset.jpg" alt="A woman looks out at the final golden light of a sunset. The sky is covered in clouds allowing the light to bounce off them and light up the water, giving the whole scene a look of being on fire.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Alaska Rain, Ketchikan, 2022" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Alaska_Rain.jpg" alt="Between the viewer and the sun is an island covered in darkness. A raincloud pouring down on the island creates a gradient of grey above the island while allowing bright clouds to be seen behind the rain.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Blue Siena, Italy 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Blue_Siena.jpg" alt="The hills that surround Siena are bathed in blue hour light. Four hills are covered by increasingly light hues of blue, purple, and haze.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Milano Church Windows, 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Milano_Church_Windows.jpg" alt="Churchgoers are obscured by old textured glass. Divided into six segments, the glass gives the people behind it an almost painterly look.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
+      <div class="gallery-item" data-category="postcards" data-title="Paper Bird, Milano, Italy, 2026" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt, this.dataset.title)">
+        <img src="images/Paper_Bird.jpg" alt="A paper flamingo is suspended above the viewer. Viewed from below, the paper that represents the clouds becomes a winding pattern and the wooden structure the installation is attached to can be seen.">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div>
+      </div>
     </div>
+  </div>
+  <div class="postcards-cta" id="postcards-cta" style="display:none;">
+    <div class="postcards-cta-text">
+      <h4>Get a Postcard</h4>
+      <p>When Jaki travels, he prints and mails real postcards to people who sign up. No algorithm. No screen. Just a photo in your mailbox.</p>
+    </div>
+    <a href="#" onclick="showPage('postcards-signup'); return false;" class="btn btn-primary">Sign Up</a>
   </div>
 </div>
 
@@ -1368,6 +1443,63 @@
   </div>
 </div>
 
+<!-- ══ POSTCARDS SIGNUP ══ -->
+<div class="page" id="postcards-signup">
+  <div style="padding: 0 40px;">
+    <div class="page-header">
+      <h1>Get a Postcard</h1>
+      <p class="sub">Real Mail · From Wherever Jaki Is</p>
+    </div>
+    <div style="max-width: 640px; margin-top: 40px;">
+      <p style="font-size:15px; color:rgba(242,237,227,0.75); line-height:1.7; margin-bottom: 32px;">When Jaki travels he prints photos on postcard paper and mails them to people on his list — from the city he's in, the day he takes them. No algorithm. No screen. Just a photograph in your mailbox.</p>
+      <form class="inquiry-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" style="max-width:100%; margin:0;">
+        <input type="hidden" name="_subject" value="Postcard Signup — Victory Sauce">
+        <div class="form-row">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="email@example.com" required>
+        </div>
+        <div class="form-row">
+          <label>Address Line 1</label>
+          <input type="text" name="address1" placeholder="Street address" required>
+        </div>
+        <div class="form-row">
+          <label>Address Line 2 <span style="opacity:0.45;">optional</span></label>
+          <input type="text" name="address2" placeholder="Apartment, suite, floor, etc.">
+        </div>
+        <div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div>
+            <label>City</label>
+            <input type="text" name="city" placeholder="City" required>
+          </div>
+          <div>
+            <label>State / Province <span style="opacity:0.45;">if applicable</span></label>
+            <input type="text" name="state" placeholder="State or province">
+          </div>
+        </div>
+        <div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div>
+            <label>Postal / ZIP Code</label>
+            <input type="text" name="postal" placeholder="Postal code" required>
+          </div>
+          <div>
+            <label>Country</label>
+            <input type="text" name="country" placeholder="Country" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Anything else <span style="opacity:0.45;">optional</span></label>
+          <textarea name="message" placeholder="Notes, preferred subjects, say hello..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Sign Me Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <!-- ══ CONTACT ══ -->
 <div class="page" id="contact">
   <div style="padding: 0 40px;">
@@ -1509,6 +1641,8 @@
           item.style.display = 'none';
         }
       });
+      const cta = document.getElementById('postcards-cta');
+      if (cta) cta.style.display = cat === 'postcards' ? 'flex' : 'none';
     });
   });
 
