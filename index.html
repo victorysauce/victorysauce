@@ -286,18 +286,16 @@
     align-items: start;
   }
   .work-thumb {
-    background: #1a1a2e;
+    background: var(--black);
     cursor: pointer;
   }
   .work-thumb:first-child { grid-column: span 2; }
-  .work-thumb img { width: 100%; height: auto; display: block; }
-  .work-thumb-label {
-    padding: 8px 0 0;
-    font-family: var(--oswald);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(242,237,227,0.45);
+  .work-thumb img {
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
   }
 
   /* placeholder image fills */
@@ -540,15 +538,21 @@
   .print-card:hover { transform: scale(1.01); z-index: 1; }
   .print-img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
     display: block;
+    background: #111;
+    cursor: zoom-in;
   }
   .print-img.img-placeholder {
     aspect-ratio: 3/4;
+    height: auto;
     min-height: 260px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: default;
   }
   .print-info {
     padding: 16px;
@@ -1132,19 +1136,15 @@
     <div class="work-grid">
       <div class="work-thumb" onclick="openLightbox('images/The_Fountain.jpg', 'The fountain of Piazza Castello shoots turquoise water in front of the clock tower of Castello Sforzesco, Milan. Infrared turns the sky and water a vivid teal while a lone tree glows hot pink to the right.', 'The Fountain, Milan, 2026')">
         <img src="images/The_Fountain.jpg" alt="The fountain of Piazza Castello shoots turquoise water in front of the clock tower of Castello Sforzesco, Milan. Infrared turns the sky and water a vivid teal while a lone tree glows hot pink to the right.">
-        <div class="work-thumb-label">The Fountain, Milan</div>
       </div>
       <div class="work-thumb" onclick="openLightbox('images/Cool_Reflection.jpg', 'A woman tries a hat on at a market stall. We see her through the reflection of the mirror she is using to view herself.', 'Cool Reflection, Paris, 2025')">
         <img src="images/Cool_Reflection.jpg" alt="A woman tries a hat on at a market stall. We see her through the reflection of the mirror she is using to view herself.">
-        <div class="work-thumb-label">Cool Reflection, Paris</div>
       </div>
       <div class="work-thumb" onclick="openLightbox('images/Blue_Firenze.jpg', 'Poised atop the Duomo in Firenze, a visitor looks out at a city bathed in blue hour light. Light orange, purples, and blues cover the scene both from natural light and artificial city light.', 'Blue Firenze, Italy 2026')">
         <img src="images/Blue_Firenze.jpg" alt="Poised atop the Duomo in Firenze, a visitor looks out at a city bathed in blue hour light. Light orange, purples, and blues cover the scene both from natural light and artificial city light.">
-        <div class="work-thumb-label">Blue Firenze</div>
       </div>
       <div class="work-thumb" onclick="openLightbox('images/Calvin_Pose.jpg', 'A model stands by an open gate. He poses shirtless wearing a jacket.', 'Calvin Pose, Santa Joana Lisboa, 2024')">
         <img src="images/Calvin_Pose.jpg" alt="A model stands by an open gate. He poses shirtless wearing a jacket.">
-        <div class="work-thumb-label">Calvin Pose, Lisbon</div>
       </div>
     </div>
   </div>
@@ -1423,36 +1423,40 @@
     </div>
 
     <div class="print-grid">
-      <div class="print-card" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">
-        <img class="print-img" src="images/Ourika_Valley.jpg" alt="The Atlas Mountains recede in layers into the distance above Ourika Valley. Infrared turns the forested lower slopes hot pink; each successive ridge grows darker and more snowcapped, the tallest peaks almost entirely white against a deep teal sky.">
+      <div class="print-card">
+        <img class="print-img" src="images/Ourika_Valley.jpg" alt="The Atlas Mountains recede in layers into the distance above Ourika Valley. Infrared turns the forested lower slopes hot pink; each successive ridge grows darker and more snowcapped, the tallest peaks almost entirely white against a deep teal sky." onclick="openLightbox('images/Ourika_Valley.jpg', this.alt, 'Ourika Valley, Morocco, 2025')">
         <div class="print-info">
           <div class="print-title">Ourika Valley</div>
           <div class="print-meta">Infrared series · Morocco, 2025</div>
           <div class="print-price">POA <span>· enquire for pricing</span></div>
+          <button class="btn btn-outline" style="margin-top:12px; font-size:11px; padding:8px 16px;" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">Enquire</button>
         </div>
       </div>
-      <div class="print-card" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">
-        <img class="print-img" src="images/Golden_Lisbon.jpg" alt="Lisbon's golden light pours over the city in front of Igreja de Santa Maria Madalena de Lisboa. The angle of the sun keeps one side of the street in darkness while illuminating the other.">
+      <div class="print-card">
+        <img class="print-img" src="images/Golden_Lisbon.jpg" alt="Lisbon's golden light pours over the city in front of Igreja de Santa Maria Madalena de Lisboa. The angle of the sun keeps one side of the street in darkness while illuminating the other." onclick="openLightbox('images/Golden_Lisbon.jpg', this.alt, 'Golden Lisbon, 2024')">
         <div class="print-info">
           <div class="print-title">Golden Lisbon</div>
           <div class="print-meta">Street series · Lisbon, 2024</div>
           <div class="print-price">POA <span>· enquire for pricing</span></div>
+          <button class="btn btn-outline" style="margin-top:12px; font-size:11px; padding:8px 16px;" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">Enquire</button>
         </div>
       </div>
-      <div class="print-card" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">
-        <img class="print-img" src="images/Lisbon_Tram_28.jpg" alt="Lisbon's most famous yellow tram rounds the bends on its way to Graça, making its way through bright yellow, blue, and pink buildings.">
+      <div class="print-card">
+        <img class="print-img" src="images/Lisbon_Tram_28.jpg" alt="Lisbon's most famous yellow tram rounds the bends on its way to Graça, making its way through bright yellow, blue, and pink buildings." onclick="openLightbox('images/Lisbon_Tram_28.jpg', this.alt, 'Lisbon Tram 28, 2024')">
         <div class="print-info">
           <div class="print-title">Lisbon Tram 28</div>
           <div class="print-meta">Street series · Lisbon, 2024</div>
           <div class="print-price">POA <span>· enquire for pricing</span></div>
+          <button class="btn btn-outline" style="margin-top:12px; font-size:11px; padding:8px 16px;" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">Enquire</button>
         </div>
       </div>
-      <div class="print-card" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">
-        <img class="print-img" src="images/Misted_Tower.jpg" alt="The tip of the Eiffel Tower is covered by a rolling mist. Slightly obscured, the various wires and communication devices can still be seen protruding in every direction.">
+      <div class="print-card">
+        <img class="print-img" src="images/Misted_Tower.jpg" alt="The tip of the Eiffel Tower is covered by a rolling mist. Slightly obscured, the various wires and communication devices can still be seen protruding in every direction." onclick="openLightbox('images/Misted_Tower.jpg', this.alt, 'Misted Tower, Paris, 2025')">
         <div class="print-info">
           <div class="print-title">Misted Tower</div>
           <div class="print-meta">Postcards series · Paris, 2025</div>
           <div class="print-price">POA <span>· enquire for pricing</span></div>
+          <button class="btn btn-outline" style="margin-top:12px; font-size:11px; padding:8px 16px;" onclick="document.getElementById('shop-form').scrollIntoView({behavior:'smooth'})">Enquire</button>
         </div>
       </div>
     </div>
