@@ -1083,6 +1083,128 @@
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
   }
+  /* ── HAMBURGER ── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--cream);
+    transition: all 0.25s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+
+    /* Nav */
+    nav { padding: 16px 20px; }
+    .nav-hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(13,13,13,0.98);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      z-index: 150;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+      font-size: 28px;
+      letter-spacing: 0.12em;
+      color: var(--cream);
+    }
+
+    /* Hero */
+    .hero { padding: 40px 20px; }
+    .hero-title { font-size: clamp(56px, 18vw, 100px); }
+    .zine-tags { display: none; }
+
+    /* Featured strip */
+    .featured-strip { padding: 40px 20px; }
+    .work-grid { grid-template-columns: 1fr; }
+
+    /* Page padding */
+    .page { padding-top: 60px; }
+    #work, #about, #shop, #events, #contact, #blog { padding: 65px 20px 40px; }
+    #about { max-width: 100%; }
+    .page-header { margin-bottom: 32px; }
+
+    /* Work gallery */
+    .gallery-masonry { columns: 1; }
+
+    /* About */
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .about-portrait { position: static; }
+
+    /* Shop */
+    .inquiry-form { padding: 24px 20px; }
+
+    /* Events */
+    .event-row {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .event-tag { justify-self: start; }
+
+    /* Contact */
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    /* Blog */
+    .blog-grid { grid-template-columns: 1fr; }
+    .blog-card:first-child { grid-column: span 1; }
+    .blog-card:first-child .blog-title { font-size: 24px; }
+    .blog-card { padding: 24px; }
+
+    /* Newsletter / CTA strips */
+    .newsletter-strip { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+    .postcards-cta { padding: 32px 20px; flex-direction: column; }
+
+    /* Footer */
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 32px 20px;
+      margin-top: 40px;
+    }
+
+    /* Lightbox */
+    .lightbox-close { top: 16px; right: 16px; }
+    .lightbox-img img { max-width: 95vw; max-height: 75vh; }
+
+    /* Form rows with inline grids */
+    .form-row[style*="grid-template-columns"] {
+      display: block !important;
+    }
+    .form-row[style*="grid-template-columns"] > div {
+      margin-bottom: 16px;
+    }
+    .form-row[style*="grid-template-columns"] > div:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   /* Scrollbar */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--black); }
@@ -1094,13 +1216,16 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#" onclick="showPage('home')">Victory Sauce</a>
-  <ul class="nav-links">
-    <li><a href="#" onclick="showPage('work')" id="nav-work">Work</a></li>
-    <li><a href="#" onclick="showPage('about')" id="nav-about">About</a></li>
-    <li><a href="#" onclick="showPage('shop')" id="nav-shop">Shop</a></li>
-    <li><a href="#" onclick="showPage('events')" id="nav-events">Events</a></li>
-    <li><a href="#" onclick="showPage('blog')" id="nav-blog">Journal</a></li>
-    <li><a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" onclick="showPage('work'); closeMenu();" id="nav-work">Work</a></li>
+    <li><a href="#" onclick="showPage('about'); closeMenu();" id="nav-about">About</a></li>
+    <li><a href="#" onclick="showPage('shop'); closeMenu();" id="nav-shop">Shop</a></li>
+    <li><a href="#" onclick="showPage('events'); closeMenu();" id="nav-events">Events</a></li>
+    <li><a href="#" onclick="showPage('blog'); closeMenu();" id="nav-blog">Journal</a></li>
+    <li><a href="#" onclick="showPage('contact'); closeMenu();" id="nav-contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -1703,6 +1828,16 @@
 </div>
 
 <script>
+  // Hamburger menu
+  function closeMenu() {
+    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('nav-hamburger').classList.remove('open');
+  }
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+
   // ── SEO meta per page ──
   const PAGE_SEO = {
     home: {
