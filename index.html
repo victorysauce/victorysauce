@@ -1105,29 +1105,44 @@
   .nav-hamburger.open span:nth-child(2) { opacity: 0; }
   .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+  /* ── MOBILE MENU OVERLAY ── */
+  /* Lives outside <nav> to avoid backdrop-filter stacking context */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(13,13,13,0.98);
+    z-index: 90;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+  .mobile-menu-links a {
+    font-family: var(--oswald);
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .mobile-menu-links a:hover { color: var(--teal); }
+
   /* ── MOBILE ── */
   @media (max-width: 768px) {
 
     /* Nav */
     nav { padding: 16px 20px; }
     .nav-hamburger { display: flex; }
-    .nav-links {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(13,13,13,0.98);
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 36px;
-      z-index: 150;
-    }
-    .nav-links.open { display: flex; }
-    .nav-links a {
-      font-size: 28px;
-      letter-spacing: 0.12em;
-      color: var(--cream);
-    }
+    .nav-links { display: none; }
 
     /* Hero */
     .hero { padding: 40px 20px; }
@@ -1138,9 +1153,9 @@
     .featured-strip { padding: 40px 20px; }
     .work-grid { grid-template-columns: 1fr; }
 
-    /* Page padding */
+    /* Page padding — 80px top gives breathing room below the fixed nav */
     .page { padding-top: 60px; }
-    #work, #about, #shop, #events, #contact, #blog { padding: 65px 20px 40px; }
+    #work, #about, #shop, #events, #contact, #blog { padding: 80px 20px 40px; }
     #about { max-width: 100%; }
     .page-header { margin-bottom: 32px; }
 
@@ -1216,18 +1231,30 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#" onclick="showPage('home')">Victory Sauce</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" onclick="showPage('work')" id="nav-work">Work</a></li>
+    <li><a href="#" onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a href="#" onclick="showPage('shop')" id="nav-shop">Shop</a></li>
+    <li><a href="#" onclick="showPage('events')" id="nav-events">Events</a></li>
+    <li><a href="#" onclick="showPage('blog')" id="nav-blog">Journal</a></li>
+    <li><a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+  </ul>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#" onclick="showPage('work'); closeMenu();" id="nav-work">Work</a></li>
-    <li><a href="#" onclick="showPage('about'); closeMenu();" id="nav-about">About</a></li>
-    <li><a href="#" onclick="showPage('shop'); closeMenu();" id="nav-shop">Shop</a></li>
-    <li><a href="#" onclick="showPage('events'); closeMenu();" id="nav-events">Events</a></li>
-    <li><a href="#" onclick="showPage('blog'); closeMenu();" id="nav-blog">Journal</a></li>
-    <li><a href="#" onclick="showPage('contact'); closeMenu();" id="nav-contact">Contact</a></li>
-  </ul>
 </nav>
+
+<!-- Mobile menu — outside nav to avoid backdrop-filter stacking context -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="#" onclick="showPage('work'); closeMenu();">Work</a></li>
+    <li><a href="#" onclick="showPage('about'); closeMenu();">About</a></li>
+    <li><a href="#" onclick="showPage('shop'); closeMenu();">Shop</a></li>
+    <li><a href="#" onclick="showPage('events'); closeMenu();">Events</a></li>
+    <li><a href="#" onclick="showPage('blog'); closeMenu();">Journal</a></li>
+    <li><a href="#" onclick="showPage('contact'); closeMenu();">Contact</a></li>
+  </ul>
+</div>
 
 <!-- ══ HOME ══ -->
 <div class="page active" id="home">
@@ -1267,7 +1294,7 @@
     </div>
   </div>
 
-  <div class="newsletter-strip">
+  <div class="newsletter-strip" id="newsletter-strip">
     <div>
       <h4>Dispatch</h4>
       <p>New work, events, and occasional writing. No noise.</p>
@@ -1664,7 +1691,7 @@
       <p class="sub">Notes on photography, Lisbon, and the work</p>
     </div>
     <div class="blog-note" style="margin-top: 32px;">
-      Posts also go out as the newsletter. <a href="#" onclick="showPage('home')" style="color: var(--teal);">Subscribe</a> to get them in your inbox.
+      Posts also go out as the newsletter. <a href="#" onclick="showPage('home'); setTimeout(()=>document.getElementById('newsletter-strip').scrollIntoView({behavior:'smooth'}),400);" style="color: var(--teal);">Subscribe</a> to get them in your inbox.
     </div>
     <div class="blog-grid">
       <div class="blog-card">
@@ -1830,12 +1857,12 @@
 <script>
   // Hamburger menu
   function closeMenu() {
-    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('mobile-menu').classList.remove('open');
     document.getElementById('nav-hamburger').classList.remove('open');
   }
   document.getElementById('nav-hamburger').addEventListener('click', function() {
     this.classList.toggle('open');
-    document.getElementById('nav-links').classList.toggle('open');
+    document.getElementById('mobile-menu').classList.toggle('open');
   });
 
   // ── SEO meta per page ──
