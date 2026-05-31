@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Victory Sauce</title>
+<meta name="description" content="Event recaps, workshop notes, and writing from Victory Sauce — photography events in Lisbon.">
+<link rel="canonical" href="https://victorysauce.com/blog">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Victory Sauce">
+<meta property="og:url" content="https://victorysauce.com/blog">
+<meta property="og:title" content="Blog — Victory Sauce">
+<meta property="og:description" content="Event recaps, workshop notes, and writing from Victory Sauce — photography events in Lisbon.">
+<meta property="og:image" content="https://victorysauce.com/images/Bubble_Stars.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@victory_sauce">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">Victory Sauce</a>
+  <ul class="nav-links">
+    <li><a href="/events">Events</a></li>
+    <li><a href="/signup">Sign Up</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="/events">Events</a></li>
+    <li><a href="/signup">Sign Up</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</div>
+<div class="page-content">
+  <div style="padding: 80px 40px 40px;">
+    <div class="page-header">
+      <h1>Blog</h1>
+      <p class="sub">Writing · Notes · Recaps</p>
+    </div>
+    <div class="blog-note">
+      Event recaps, workshop notes, and occasional writing. <a href="/signup" style="color: var(--teal);">Subscribe</a> to get them in your inbox.
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-date">Placeholder · 2026</div>
+        <div class="blog-title">First post coming soon</div>
+        <div class="blog-excerpt">This is where blog posts and event write-ups will live. Check back after the first event.</div>
+      </div>
+    </div>
+  </div>
+<footer>
+  <div class="footer-logo">Victory Sauce</div>
+  <div class="footer-copy">© 2026 Victory Sauce</div>
+  <div class="footer-links">
+    <a href="https://luma.com/victorysauce" target="_blank">Events</a>
+    <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+    <a href="/privacy">Privacy</a>
+  </div>
+</footer>
+</div>
+<script>
+  const hamburger = document.getElementById('nav-hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', function() {
+    this.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+</script>
+</body>
+</html>
