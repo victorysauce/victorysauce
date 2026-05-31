@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Events — Victory Sauce</title>
-<meta name="description" content="Upcoming photography workshops, street walks, and events in Lisbon. Book your place via Luma. Hosted by Jaki Gerulskis.">
+<meta name="description" content="Upcoming photography workshops, street walks, and events in Lisbon. Book your place via Luma.">
 <link rel="canonical" href="https://victorysauce.com/events">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Victory Sauce">
 <meta property="og:url" content="https://victorysauce.com/events">
 <meta property="og:title" content="Events — Victory Sauce">
-<meta property="og:description" content="Upcoming photography workshops, street walks, and events in Lisbon. Book your place via Luma. Hosted by Jaki Gerulskis.">
+<meta property="og:description" content="Upcoming photography workshops, street walks, and events in Lisbon. Book your place via Luma.">
 <meta property="og:image" content="https://victorysauce.com/images/Bubble_Stars.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@victory_sauce">
@@ -30,7 +30,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
 <div class="mobile-menu" id="mobile-menu">
   <ul class="mobile-menu-links">
     <li><a href="/events">Events</a></li>
@@ -39,27 +38,28 @@
   </ul>
 </div>
 <div class="page-content">
-  <div style="padding: 80px 40px 40px;">
+  <div style="padding:0 40px 40px;">
     <div class="page-header">
       <h1>Events</h1>
-      <p class="sub">Workshops · Walks · Exhibitions</p>
+      <p class="sub">Workshops &middot; Walks &middot; Exhibitions</p>
     </div>
-    <p class="events-intro">Upcoming workshops and events. All ticketing via Luma — book your place there.</p>
+    <p class="events-intro">Upcoming workshops and events. All ticketing via Luma &mdash; book your place there.</p>
     <div class="luma-embed">
       <iframe src="https://luma.com/embed/calendar/cal-TgsR1Aeksm0LsCw/events"
         frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     <div class="upcoming-events">
-      <a href="/events/high-voltage-portraits" class="event-row" style="text-decoration:none;">
+      <a href="/events/high-voltage-portraits" class="event-row" style="text-decoration:none;display:grid;">
         <div class="event-date">25 Jul<br>2026</div>
         <div>
-          <div class="event-name">Will Bremridge — High Voltage Portraits</div>
-          <div class="event-details">Photowalk + Workshop · Lisbon · €150 · Max 12 participants</div>
+          <div class="event-name">Will Bremridge &mdash; High Voltage Portraits</div>
+          <div class="event-details">Photowalk + Workshop &middot; Lisbon &middot; &euro;150 &middot; Max 12 participants</div>
         </div>
         <span class="event-tag">Book Now</span>
       </a>
     </div>
   </div>
+</div>
 <footer>
   <div class="footer-logo">Victory Sauce</div>
   <div class="footer-copy">© 2026 Victory Sauce</div>
@@ -69,13 +69,10 @@
     <a href="/privacy">Privacy</a>
   </div>
 </footer>
-</div>
 <script>
-  const hamburger = document.getElementById('nav-hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', function() {
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
     this.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
+    document.getElementById('mobile-menu').classList.toggle('open');
   });
 </script>
 </body>
