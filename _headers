@@ -1,2 +1,2 @@
 /*
-  Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' https://assets.mailerlite.com https://static.mailerlite.com https://connect.mailerlite.com; frame-src 'self' https://luma.com https://lu.ma;
+  Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.mailerlite.com https://luma.com https://js.lu.ma; frame-src 'self' https://luma.com https://lu.ma https://*.luma.com;
