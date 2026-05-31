@@ -101,7 +101,7 @@
     padding: 18px 40px;
     background: rgba(13,13,13,0.92);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.10);
   }
   .nav-logo {
     font-family: var(--oswald);
@@ -678,11 +678,21 @@
   .wh-photographer {
     font-family: var(--oswald);
     font-weight: 400;
-    font-size: clamp(13px, 1.4vw, 17px);
-    letter-spacing: 0.22em;
+    font-size: clamp(11px, 1.2vw, 14px);
+    letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: rgba(242,237,227,0.55);
-    margin-bottom: 10px;
+    color: var(--teal);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .wh-photographer::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--teal);
   }
   .wh-title {
     font-family: var(--oswald);
@@ -732,7 +742,7 @@
     font-size: 9px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(242,237,227,0.35);
+    color: rgba(242,237,227,0.55);
     margin-bottom: 6px;
   }
   .wh-meta-value {
@@ -741,7 +751,7 @@
     font-size: 14px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgba(242,237,227,0.9);
+    color: var(--cream);
     line-height: 1.4;
   }
   .wh-price {
@@ -757,7 +767,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 70vh;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.14);
   }
   .wf-images {
     display: grid;
@@ -797,7 +807,7 @@
     font-size: 13px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(242,237,227,0.45);
+    color: rgba(242,237,227,0.75);
     margin-bottom: 8px;
   }
   .wf-event-title {
@@ -815,7 +825,7 @@
     font-style: italic;
     font-size: 15px;
     line-height: 1.7;
-    color: rgba(242,237,227,0.55);
+    color: rgba(242,237,227,0.8);
     margin-bottom: 28px;
     max-width: 400px;
   }
@@ -857,13 +867,14 @@
     gap: 14px;
   }
   .wf-headshot {
-    width: 48px;
-    height: 48px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center top;
     display: block;
     flex-shrink: 0;
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
   }
   .wf-photographer-card-name {
     font-family: var(--oswald);
@@ -886,15 +897,6 @@
     justify-content: space-between;
     gap: 40px;
     border-bottom: 1px solid rgba(255,255,255,0.07);
-    position: relative;
-  }
-  .vs-identity::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(to bottom, var(--teal), transparent);
   }
   .vs-identity-title {
     font-family: var(--oswald);
@@ -1019,12 +1021,11 @@
     <div class="workshop-hero-vignette"></div>
     <div class="workshop-hero-content">
       <div class="wh-left">
-        <div class="wh-eyebrow">Featured Workshop · Lisbon · July 2026</div>
-        <div class="wh-photographer">Will Bremridge</div>
+        <div class="wh-photographer">Featured Workshop · Lisbon · July 2026</div>
         <h1 class="wh-title">
-          PHOTO<span class="hollow">WALK</span>
+          WILL<span class="hollow">BREMRIDGE</span>
         </h1>
-        <a href="https://luma.com/victorysauce" target="_blank" class="wh-cta">Book Your Place</a>
+        <a href="https://luma.com/victorysauce" target="_blank" class="btn btn-primary" style="font-size:14px; padding:14px 32px;">Book Your Place</a>
       </div>
       <div class="wh-right">
         <div class="wh-meta">
@@ -1035,7 +1036,7 @@
           <div class="wh-meta-label">Format</div>
           <div class="wh-meta-value">3hr Photowalk<br>+ 3hr Workshop</div>
         </div>
-        <div class="wh-price">$150</div>
+        <div class="wh-price">€150</div>
       </div>
     </div>
   </div>
@@ -1066,7 +1067,7 @@
           </div>
           <div>
             <div class="wf-detail-label">Places</div>
-            <div class="wf-detail-value">Limited availability</div>
+            <div class="wf-detail-value">Max 12 participants</div>
           </div>
         </div>
       </div>
@@ -1086,6 +1087,7 @@
   <!-- VS IDENTITY -->
   <div class="vs-identity">
     <div class="vs-identity-left">
+      <p class="hero-eyebrow">Photography Community · Lisbon</p>
       <div class="vs-identity-title">
         <span class="line1">Victory</span>
         <span class="line2" id="hero-line2">Sauce</span>
@@ -1103,7 +1105,6 @@
         <span class="ztag ztag-yellow">Masterclasses</span>
         <span class="ztag ztag-blue">Lisbon</span>
       </div>
-      <p style="font-size:11px; color:rgba(242,237,227,0.25); letter-spacing:0.08em; text-align:right;">Photography Community · Lisbon</p>
     </div>
   </div>
 
@@ -1121,9 +1122,8 @@
     <div class="footer-logo">Victory Sauce</div>
     <div class="footer-copy">© 2026 Victory Sauce</div>
     <div class="footer-links">
+      <a href="https://luma.com/victorysauce" target="_blank">Events</a>
       <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
-      <a href="https://luma.com/victorysauce" target="_blank">Luma</a>
-      <a href="https://jakigerulskis.com" target="_blank">Jaki's Portfolio</a>
     </div>
   </footer>
 </div>
