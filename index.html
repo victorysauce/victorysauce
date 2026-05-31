@@ -1119,6 +1119,7 @@
     <div class="footer-links">
       <a href="https://luma.com/victorysauce" target="_blank">Events</a>
       <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+      <a href="#" onclick="showPage('privacy')">Privacy</a>
     </div>
   </footer>
 </div>
@@ -1160,6 +1161,7 @@
     <div class="footer-links">
       <a href="https://luma.com/victorysauce" target="_blank">Events</a>
       <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+      <a href="#" onclick="showPage('privacy')">Privacy</a>
     </div>
   </footer>
 </div>
@@ -1190,6 +1192,7 @@
     <div class="footer-links">
       <a href="https://luma.com/victorysauce" target="_blank">Events</a>
       <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+      <a href="#" onclick="showPage('privacy')">Privacy</a>
     </div>
   </footer>
 </div>
@@ -1219,6 +1222,7 @@
     <div class="footer-links">
       <a href="https://luma.com/victorysauce" target="_blank">Events</a>
       <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+      <a href="#" onclick="showPage('privacy')">Privacy</a>
     </div>
   </footer>
 </div>
@@ -1284,11 +1288,47 @@
     <div class="footer-links">
       <a href="https://luma.com/victorysauce" target="_blank">Events</a>
       <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+      <a href="#" onclick="showPage('privacy')">Privacy</a>
     </div>
   </footer>
 </div>
 
 <script>
+<!-- ══ PRIVACY ══ -->
+<div class="page" id="privacy">
+  <div style="padding: 0 40px; max-width: 720px;">
+    <div class="page-header">
+      <h1>Privacy Policy</h1>
+      <p class="sub">Last updated: May 2026</p>
+    </div>
+    <div style="color: rgba(242,237,227,0.75); font-size: 15px; line-height: 1.8;">
+      <h3 style="font-family: var(--oswald); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin: 32px 0 12px;">Who we are</h3>
+      <p>Victory Sauce is a photography community based in Lisbon, run by Jaki Gerulskis. Our website is victorysauce.com.</p>
+      <h3 style="font-family: var(--oswald); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin: 32px 0 12px;">What data we collect</h3>
+      <p>We collect your email address when you sign up to The Drop, and your name, email, and message when you contact us via the contact form.</p>
+      <h3 style="font-family: var(--oswald); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin: 32px 0 12px;">How we use it</h3>
+      <p>Your email address is used to send you event notifications and occasional photography tips. We will never sell your data or share it with third parties for marketing purposes.</p>
+      <h3 style="font-family: var(--oswald); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin: 32px 0 12px;">Third-party services</h3>
+      <p>We use <strong style="color: var(--cream);">MailerLite</strong> to manage our mailing list and <strong style="color: var(--cream);">Formspree</strong> to process contact form submissions. Both process data in accordance with GDPR. See their policies at mailerlite.com and formspree.io.</p>
+      <h3 style="font-family: var(--oswald); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin: 32px 0 12px;">Your rights</h3>
+      <p>You can unsubscribe at any time using the link in any email we send. To request deletion of your data, email <a href="mailto:hello@victorysauce.com" style="color: var(--teal);">hello@victorysauce.com</a>.</p>
+      <h3 style="font-family: var(--oswald); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin: 32px 0 12px;">Cookies</h3>
+      <p>This site does not use tracking cookies. MailerLite and Formspree may set cookies in accordance with their own policies.</p>
+      <h3 style="font-family: var(--oswald); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin: 32px 0 12px;">Questions</h3>
+      <p><a href="mailto:hello@victorysauce.com" style="color: var(--teal);">hello@victorysauce.com</a></p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo">Victory Sauce</div>
+    <div class="footer-copy">© 2026 Victory Sauce</div>
+    <div class="footer-links">
+      <a href="https://luma.com/victorysauce" target="_blank">Events</a>
+      <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+      <a href="#" onclick="showPage('privacy')">Privacy</a>
+    </div>
+  </footer>
+</div>
+
   // Hamburger menu
   function closeMenu() {
     document.getElementById('mobile-menu').classList.remove('open');
@@ -1325,6 +1365,11 @@
       title: 'Contact — Victory Sauce',
       description: 'Workshop bookings, press, venue partnerships, and sponsorship enquiries for Victory Sauce photography events in Lisbon.',
       url: 'https://victorysauce.com/contact',
+    },
+    privacy: {
+      title: 'Privacy Policy — Victory Sauce',
+      description: 'Privacy policy for Victory Sauce. How we collect, use, and protect your data.',
+      url: 'https://victorysauce.com/privacy',
     },
   };
 
