@@ -69,7 +69,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(242,237,227,0.5);
+  color: rgba(242,237,227,0.55);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@ nav {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../../images/Will-Bremridge-072A7028web.webp');
+  background-image: url('/images/Will-Bremridge-072A7028web.webp');
   background-size: cover;
   background-position: center;
 }
@@ -188,7 +188,7 @@ nav {
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(242,237,227,0.45);
+  color: rgba(242,237,227,0.55);
   margin-bottom: 5px;
 }
 .hero-meta-value {
@@ -374,7 +374,7 @@ nav {
 }
 .about-will-sub {
   font-size: 12px;
-  color: rgba(242,237,227,0.45);
+  color: rgba(242,237,227,0.55);
   margin-top: 2px;
 }
 .about-will-bio {
@@ -488,16 +488,16 @@ footer {
   font-size: 16px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(242,237,227,0.5);
+  color: rgba(242,237,227,0.6);
 }
-.footer-copy { font-size: 12px; color: rgba(242,237,227,0.4); }
+.footer-copy { font-size: 12px; color: rgba(242,237,227,0.55); }
 .footer-links { display: flex; gap: 24px; }
 .footer-links a {
   font-family: var(--oswald);
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(242,237,227,0.5);
+  color: rgba(242,237,227,0.55);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -525,7 +525,7 @@ footer {
 .lightbox-caption {
   font-family: var(--dm);
   font-size: 13px;
-  color: rgba(242,237,227,0.5);
+  color: rgba(242,237,227,0.65);
   font-style: italic;
   margin-top: 14px;
   text-align: center;
@@ -604,16 +604,16 @@ body::before {
 
 <script>
 const images = [
-  { src: '../../images/Will-Bremridge-072A7028web.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/Lifestyle-Photographer-London-Will-Bremridge-Amaroun.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/Will-Bremridge-Jay-Johnson.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/Will-Bremridge-M1A4465.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/Will-Bremridge-M1A5817.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/Will-Bremridge-09.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/_M1A6516-Edit.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/MJM-website.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/breeze-gif.webp', caption: 'Photograph by Will Bremridge' },
-  { src: '../../images/Will-Bremridge-Skipping.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/Will-Bremridge-072A7028web.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/Lifestyle-Photographer-London-Will-Bremridge-Amaroun.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/Will-Bremridge-Jay-Johnson.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/Will-Bremridge-M1A4465.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/Will-Bremridge-M1A5817.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/Will-Bremridge-09.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/_M1A6516-Edit.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/MJM-website.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/breeze-gif.webp', caption: 'Photograph by Will Bremridge' },
+  { src: '/images/Will-Bremridge-Skipping.webp', caption: 'Photograph by Will Bremridge' },
 ];
 let current = 0;
 function openLightbox(idx) {
@@ -688,16 +688,16 @@ document.addEventListener('keydown', function(e) {
 <!-- GALLERY -->
 <div class="gallery-section">
   <div class="gallery-masonry">
-    <div class="gallery-item" onclick="openLightbox(0)"><img src="../../images/Will-Bremridge-072A7028web.webp" alt="A young man in an orange hoodie rests his arms on a white iron fence against a deep red wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(1)"><img src="../../images/Lifestyle-Photographer-London-Will-Bremridge-Amaroun.webp" alt="A person in a brown Nike hoodie stands laughing against a vivid purple wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(2)"><img src="../../images/Will-Bremridge-Jay-Johnson.webp" alt="A young man in an orange jumper sits on a grey outdoor court wearing white oval sunglasses, smiling. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(3)"><img src="../../images/Will-Bremridge-M1A4465.webp" alt="A woman in a yellow t-shirt and lavender shorts sits laughing on the ground wearing roller skates. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(4)"><img src="../../images/Will-Bremridge-M1A5817.webp" alt="Two young men sit against a sports net on a yellow-painted outdoor basketball court in bright sunlight. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(5)"><img src="../../images/Will-Bremridge-09.webp" alt="Two women laugh and take a selfie against a pink wall, one wearing a yellow beanie and blue jacket. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(6)"><img src="../../images/_M1A6516-Edit.webp" alt="A woman in an orange crop top and pink trousers kicks her leg high on a blue outdoor sports court. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(7)"><img src="../../images/MJM-website.webp" alt="A man in an open denim shirt stands against a bold orange wall in bright sunlight. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(8)"><img src="../../images/breeze-gif.webp" alt="A smiling man in a peach t-shirt with earbuds looks up at a clear blue sky. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
-    <div class="gallery-item" onclick="openLightbox(9)"><img src="../../images/Will-Bremridge-Skipping.webp" alt="An older man with white hair skips rope shirtless against a vivid teal wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(0)"><img src="/images/Will-Bremridge-072A7028web.webp" alt="A young man in an orange hoodie rests his arms on a white iron fence against a deep red wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(1)"><img src="/images/Lifestyle-Photographer-London-Will-Bremridge-Amaroun.webp" alt="A person in a brown Nike hoodie stands laughing against a vivid purple wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(2)"><img src="/images/Will-Bremridge-Jay-Johnson.webp" alt="A young man in an orange jumper sits on a grey outdoor court wearing white oval sunglasses, smiling. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(3)"><img src="/images/Will-Bremridge-M1A4465.webp" alt="A woman in a yellow t-shirt and lavender shorts sits laughing on the ground wearing roller skates. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(4)"><img src="/images/Will-Bremridge-M1A5817.webp" alt="Two young men sit against a sports net on a yellow-painted outdoor basketball court in bright sunlight. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(5)"><img src="/images/Will-Bremridge-09.webp" alt="Two women laugh and take a selfie against a pink wall, one wearing a yellow beanie and blue jacket. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(6)"><img src="/images/_M1A6516-Edit.webp" alt="A woman in an orange crop top and pink trousers kicks her leg high on a blue outdoor sports court. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(7)"><img src="/images/MJM-website.webp" alt="A man in an open denim shirt stands against a bold orange wall in bright sunlight. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(8)"><img src="/images/breeze-gif.webp" alt="A smiling man in a peach t-shirt with earbuds looks up at a clear blue sky. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(9)"><img src="/images/Will-Bremridge-Skipping.webp" alt="An older man with white hair skips rope shirtless against a vivid teal wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Photograph by Will Bremridge</div></div>
   </div>
 </div>
 
@@ -750,7 +750,7 @@ document.addEventListener('keydown', function(e) {
     <div class="about-will">
       <div class="about-will-label">About the Photographer</div>
       <div class="about-will-header">
-        <img src="../../images/Will.jpeg" alt="Will Bremridge" class="about-will-headshot">
+        <img src="/images/Will.jpeg" alt="Will Bremridge" class="about-will-headshot">
         <div>
           <div class="about-will-name">Will Bremridge</div>
           <div class="about-will-sub">Portrait · Travel · Lifestyle · LDN / LX</div>
