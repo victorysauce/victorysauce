@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Victory Sauce</title>
-<meta name="description" content="Workshop bookings, press, venue partnerships, and sponsorship enquiries for Victory Sauce photography events in Lisbon.">
+<meta name="description" content="Workshop bookings, press, venue partnerships, and sponsorship enquiries for Victory Sauce.">
 <link rel="canonical" href="https://victorysauce.com/contact">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Victory Sauce">
 <meta property="og:url" content="https://victorysauce.com/contact">
 <meta property="og:title" content="Contact — Victory Sauce">
-<meta property="og:description" content="Workshop bookings, press, venue partnerships, and sponsorship enquiries for Victory Sauce photography events in Lisbon.">
+<meta property="og:description" content="Workshop bookings, press, venue partnerships, and sponsorship enquiries for Victory Sauce.">
 <meta property="og:image" content="https://victorysauce.com/images/Bubble_Stars.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@victory_sauce">
@@ -30,7 +30,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
 <div class="mobile-menu" id="mobile-menu">
   <ul class="mobile-menu-links">
     <li><a href="/events">Events</a></li>
@@ -39,10 +38,10 @@
   </ul>
 </div>
 <div class="page-content">
-  <div style="padding: 80px 40px 40px;">
+  <div style="padding:0 40px 40px;">
     <div class="page-header">
       <h1>Contact</h1>
-      <p class="sub">Bookings · Press · Partnerships</p>
+      <p class="sub">Bookings &middot; Press &middot; Partnerships</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
@@ -91,6 +90,7 @@
       </div>
     </div>
   </div>
+</div>
 <footer>
   <div class="footer-logo">Victory Sauce</div>
   <div class="footer-copy">© 2026 Victory Sauce</div>
@@ -100,13 +100,10 @@
     <a href="/privacy">Privacy</a>
   </div>
 </footer>
-</div>
 <script>
-  const hamburger = document.getElementById('nav-hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', function() {
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
     this.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
+    document.getElementById('mobile-menu').classList.toggle('open');
   });
 </script>
 </body>
