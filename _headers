@@ -1,2 +1,4 @@
 /*
-  Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.mailerlite.com https://luma.com https://js.lu.ma; frame-src 'self' https://luma.com https://lu.ma https://*.luma.com;
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
