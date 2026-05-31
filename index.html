@@ -999,6 +999,26 @@
   .ml-embedded .ml-form-embedContent p {
     display: none !important;
   }
+  .ml-embedded .ml-form-checkboxRow p,
+  .ml-embedded .ml-form-checkboxRow a,
+  .ml-embedded .ml-form-fieldRow label,
+  .ml-embedded label,
+  .ml-embedded p {
+    color: rgba(242,237,227,0.65) !important;
+  }
+  .ml-embedded input[type="email"],
+  .ml-embedded input[type="text"] {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    color: var(--cream) !important;
+    border-radius: 0 !important;
+  }
+  .ml-embedded input::placeholder {
+    color: rgba(242,237,227,0.35) !important;
+  }
+  .ml-embedded input[type="checkbox"] {
+    accent-color: var(--teal);
+  }
 
   /* ── SCROLLBAR ── */
   ::-webkit-scrollbar { width: 4px; }
@@ -1218,7 +1238,7 @@
 
 <!-- ══ SIGN UP ══ -->
 <div class="page" id="signup">
-  <div style="padding: 80px 40px 40px;">
+  <div style="padding: 80px 40px 40px; max-width: 560px;">
     <div class="page-header">
       <h1>The Drop</h1>
       <p class="sub">First access to new events and tips to improve your shoots</p>
