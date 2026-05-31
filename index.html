@@ -54,7 +54,7 @@
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:ital,opsz,wght@1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --blue: #2448C8;
@@ -203,6 +203,7 @@
   .ztag-blue { background: var(--blue); color: var(--cream); transform: rotate(1.5deg); }
   .ztag-teal { background: var(--teal); color: var(--black); transform: rotate(-2deg); }
   .ztag-pink { background: var(--pink); color: var(--cream); transform: rotate(0.8deg); }
+  .ztag-yellow { background: #F5C400; color: var(--black); transform: rotate(-1.2deg); }
 
   /* ── HOME ── */
   #home { position: relative; overflow: hidden; }
@@ -622,11 +623,336 @@
   }
   .mobile-menu-links a:hover { color: var(--teal); }
 
-  /* ── MOBILE ── */
+  /* ── WORKSHOP HERO ── */
+  .workshop-hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+    display: flex;
+    align-items: flex-end;
+  }
+  .workshop-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/Will-Bremridge-Factor-50.webp');
+    background-size: cover;
+    background-position: center 30%;
+  }
+  .workshop-hero-vignette {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(13,13,13,0.96) 0%, rgba(13,13,13,0.45) 45%, transparent 100%),
+      linear-gradient(to right, rgba(13,13,13,0.65) 0%, transparent 65%);
+    z-index: 1;
+  }
+  .workshop-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 40px 72px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    gap: 48px;
+  }
+  .wh-eyebrow {
+    font-family: var(--oswald);
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .wh-eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--teal);
+  }
+  .wh-photographer {
+    font-family: var(--oswald);
+    font-weight: 400;
+    font-size: clamp(13px, 1.4vw, 17px);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(242,237,227,0.55);
+    margin-bottom: 10px;
+  }
+  .wh-title {
+    font-family: var(--oswald);
+    font-weight: 700;
+    font-size: clamp(52px, 8vw, 110px);
+    line-height: 0.87;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+    margin-bottom: 36px;
+  }
+  .wh-title .hollow {
+    -webkit-text-stroke: 1.5px rgba(242,237,227,0.55);
+    color: transparent;
+    display: block;
+  }
+  .wh-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--oswald);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(242,237,227,0.3);
+    padding-bottom: 6px;
+    transition: all 0.25s;
+  }
+  .wh-cta:hover { gap: 20px; border-color: var(--pink); color: var(--pink); }
+  .wh-cta::after { content: '→'; }
+  .wh-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .wh-meta {
+    text-align: right;
+    border-right: 2px solid rgba(242,237,227,0.1);
+    padding-right: 20px;
+  }
+  .wh-meta-label {
+    font-family: var(--oswald);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(242,237,227,0.35);
+    margin-bottom: 6px;
+  }
+  .wh-meta-value {
+    font-family: var(--oswald);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(242,237,227,0.9);
+    line-height: 1.4;
+  }
+  .wh-price {
+    font-family: var(--oswald);
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--teal);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── WORKSHOP FEATURE ── */
+  .workshop-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .wf-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px;
+    background: var(--black);
+    overflow: hidden;
+  }
+  .wf-img { overflow: hidden; position: relative; }
+  .wf-img.tall { grid-row: 1 / 3; }
+  .wf-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+  .wf-img:hover img { transform: scale(1.04); }
+  .wf-info {
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #111;
+    border-left: 1px solid rgba(255,255,255,0.06);
+  }
+  .wf-label {
+    font-family: var(--oswald);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(242,237,227,0.35);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .wf-label::before { content: ''; display: block; width: 18px; height: 1px; background: var(--pink); }
+  .wf-photographer-name {
+    font-family: var(--oswald);
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(242,237,227,0.45);
+    margin-bottom: 8px;
+  }
+  .wf-event-title {
+    font-family: var(--oswald);
+    font-weight: 700;
+    font-size: clamp(28px, 3.5vw, 44px);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+  .wf-bio {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(242,237,227,0.55);
+    margin-bottom: 28px;
+    max-width: 400px;
+  }
+  .wf-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 24px 0;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 24px;
+  }
+  .wf-detail-label {
+    font-family: var(--oswald);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(242,237,227,0.3);
+    margin-bottom: 5px;
+  }
+  .wf-detail-value {
+    font-family: var(--oswald);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cream);
+    line-height: 1.4;
+  }
+  .wf-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .wf-price { font-family: var(--oswald); font-weight: 700; font-size: 32px; color: var(--teal); }
+  .wf-photographer-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .wf-headshot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .wf-photographer-card-name {
+    font-family: var(--oswald);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+  .wf-photographer-card-sub {
+    font-size: 11px;
+    color: rgba(242,237,227,0.35);
+    margin-top: 2px;
+  }
+
+  /* ── VS IDENTITY (below workshop) ── */
+  .vs-identity {
+    padding: 80px 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    position: relative;
+  }
+  .vs-identity::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--teal), transparent);
+  }
+  .vs-identity-title {
+    font-family: var(--oswald);
+    font-weight: 700;
+    font-size: clamp(56px, 9vw, 120px);
+    line-height: 0.85;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+  .vs-identity-title .line1 { color: var(--cream); display: block; }
+  .vs-identity-title .line2 {
+    display: block;
+    -webkit-text-stroke: 2px var(--pink);
+    color: transparent;
+  }
+  .vs-identity-title .line2.filled { color: var(--pink); -webkit-text-stroke: 0; }
+  .vs-identity-sub {
+    font-size: 14px;
+    color: rgba(242,237,227,0.45);
+    letter-spacing: 0.04em;
+    font-style: italic;
+    margin-bottom: 28px;
+  }
+  .vs-identity-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    flex-shrink: 0;
+    padding-bottom: 8px;
+  }
+  .vs-chips {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  /* ── MOBILE: workshop sections ── */
   @media (max-width: 768px) {
     nav { padding: 16px 20px; }
     .nav-hamburger { display: flex; }
     .nav-links { display: none; }
+
+    .workshop-hero-content { grid-template-columns: 1fr; padding: 0 20px 56px; }
+    .wh-right { display: none; }
+    .wh-title { font-size: clamp(48px, 16vw, 80px); }
+    .workshop-feature { grid-template-columns: 1fr; }
+    .wf-images { min-height: 60vw; grid-template-columns: 1fr 1fr; }
+    .wf-img.tall { grid-row: 1 / 3; }
+    .wf-info { padding: 40px 20px; border-left: none; border-top: 1px solid rgba(255,255,255,0.07); }
+    .wf-details { grid-template-columns: 1fr 1fr; }
+    .wf-bottom { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .vs-identity { flex-direction: column; align-items: flex-start; padding: 60px 20px; }
+    .vs-identity-right { align-items: flex-start; }
+    .vs-chips { align-items: flex-start; }
 
     .hero { padding: 40px 20px; }
     .hero-title { font-size: clamp(56px, 18vw, 100px); }
@@ -686,33 +1012,98 @@
 
 <!-- ══ HOME ══ -->
 <div class="page active" id="home">
-  <div class="hero">
-    <div class="zine-tags">
-      <span class="ztag ztag-teal">Workshops</span>
-      <span class="ztag ztag-pink">Street Walks</span>
-      <span class="ztag ztag-blue">Lisbon</span>
-    </div>
-    <p class="hero-eyebrow">Photography Events · Lisbon</p>
-    <h1 class="hero-title">
-      <span class="line1">Victory</span>
-      <span class="line2" id="hero-line2">Sauce</span>
-    </h1>
-    <p class="hero-sub">Workshops, walks, and events for people who take pictures seriously.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#" onclick="showPage('events')">See Upcoming Events</a>
-      <a class="btn btn-outline" href="#" onclick="showPage('signup')">Join the List</a>
+
+  <!-- WORKSHOP HERO -->
+  <div class="workshop-hero">
+    <div class="workshop-hero-bg"></div>
+    <div class="workshop-hero-vignette"></div>
+    <div class="workshop-hero-content">
+      <div class="wh-left">
+        <div class="wh-eyebrow">Featured Workshop · Lisbon · July 2026</div>
+        <div class="wh-photographer">Will Bremridge</div>
+        <h1 class="wh-title">
+          PHOTO<span class="hollow">WALK</span>
+        </h1>
+        <a href="https://luma.com/victorysauce" target="_blank" class="wh-cta">Book Your Place</a>
+      </div>
+      <div class="wh-right">
+        <div class="wh-meta">
+          <div class="wh-meta-label">Date</div>
+          <div class="wh-meta-value">Saturday<br>25 July 2026</div>
+        </div>
+        <div class="wh-meta">
+          <div class="wh-meta-label">Format</div>
+          <div class="wh-meta-value">3hr Photowalk<br>+ 3hr Workshop</div>
+        </div>
+        <div class="wh-price">$150</div>
+      </div>
     </div>
   </div>
 
-  <!-- Next event strip -->
-  <div class="next-event-strip">
-    <div class="next-event-label">Next Up</div>
-    <div>
-      <div class="next-event-name">— Event name to be announced —</div>
-      <div class="next-event-meta">Lisbon · Details TBC</div>
+  <!-- WORKSHOP FEATURE -->
+  <div class="workshop-feature">
+    <div class="wf-images">
+      <div class="wf-img tall">
+        <img src="images/Will-Bremridge-M1A4465.webp" alt="A young woman in a yellow t-shirt and lavender shorts sits laughing on the ground wearing roller skates, in front of a wall of neon signs. Photograph by Will Bremridge.">
+      </div>
+      <div class="wf-img">
+        <img src="images/Will-Bremridge-M1A5817.webp" alt="Two young men sit against a sports net on a yellow-painted outdoor basketball court in bright sunlight. Photograph by Will Bremridge.">
+      </div>
+      <div class="wf-img">
+        <img src="images/Will-Bremridge-Factor-50.webp" alt="Aerial view of a beach lined with straw sun umbrellas casting round shadows on pale sand, with scattered sunbathers below. Photograph by Will Bremridge.">
+      </div>
     </div>
-    <div class="next-event-date">
-      Coming<br>Soon
+    <div class="wf-info">
+      <div class="wf-info-top">
+        <div class="wf-label">About the Photographer</div>
+        <div class="wf-photographer-name">Will Bremridge · LDN / LX</div>
+        <p class="wf-bio">Portrait, travel, and lifestyle photographer shooting for brands, ad agencies and magazines. Clients include Virgin Atlantic, British GQ, The New York Times Magazine, Sony, Fiat, Channel 4, and Billboard.</p>
+        <p class="wf-bio">Will heads up On-Set Portugal, sourcing locations and crews to deliver California-like content to brands in countries less blessed with reliable sunshine.</p>
+        <div class="wf-details">
+          <div>
+            <div class="wf-detail-label">Location</div>
+            <div class="wf-detail-value">Lisbon — TBC</div>
+          </div>
+          <div>
+            <div class="wf-detail-label">Places</div>
+            <div class="wf-detail-value">Limited availability</div>
+          </div>
+        </div>
+      </div>
+      <div class="wf-bottom">
+        <div class="wf-photographer-card">
+          <img src="images/Will.jpeg" alt="Will Bremridge" class="wf-headshot">
+          <div>
+            <div class="wf-photographer-card-name">Will Bremridge</div>
+            <div class="wf-photographer-card-sub">Portrait · Travel · Lifestyle</div>
+          </div>
+        </div>
+        <a href="https://luma.com/victorysauce" target="_blank" class="btn btn-primary">Book Your Place</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- VS IDENTITY -->
+  <div class="vs-identity">
+    <div class="vs-identity-left">
+      <div class="vs-identity-title">
+        <span class="line1">Victory</span>
+        <span class="line2" id="hero-line2">Sauce</span>
+      </div>
+      <p class="vs-identity-sub">Get serious about photography — and have fun doing it.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="#" onclick="showPage('events')">See All Events</a>
+        <a class="btn btn-outline" href="#" onclick="showPage('signup')">Join the List</a>
+      </div>
+    </div>
+    <div class="vs-identity-right">
+      <div class="vs-chips">
+        <span class="ztag ztag-teal">Workshops</span>
+        <span class="ztag ztag-pink">Photowalks</span>
+        <span class="ztag ztag-yellow">Masterclasses</span>
+        <span class="ztag ztag-blue">Lisbon</span>
+      </div>
+      <p style="font-size:11px; color:rgba(242,237,227,0.25); letter-spacing:0.08em; text-align:right;">Photography Community · Lisbon</p>
     </div>
   </div>
 
@@ -728,7 +1119,7 @@
 
   <footer>
     <div class="footer-logo">Victory Sauce</div>
-    <div class="footer-copy">© 2025 Victory Sauce</div>
+    <div class="footer-copy">© 2026 Victory Sauce</div>
     <div class="footer-links">
       <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
       <a href="https://luma.com/victorysauce" target="_blank">Luma</a>
@@ -983,16 +1374,21 @@
   const pathPage = window.location.pathname.replace('/', '') || 'home';
   if (document.getElementById(pathPage)) showPage(pathPage, false);
 
-  // Hero line2 fill animation
+  // Hero line2 fill on scroll
   const line2 = document.getElementById('hero-line2');
   if (line2) {
-    setTimeout(() => line2.classList.add('filled'), 800);
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        line2.classList.add('filled');
+      } else {
+        line2.classList.remove('filled');
+      }
+    });
   }
 </script>
 
 <!-- MailerLite -->
-<script src="https://assets.mailerlite.com/js/universal.js"></script>
-<script>ml('account', '1064613');</script>
+<script src="https://assets.mailerlite.com/js/universal.js" onload="ml('account', '1064613');"></script>
 
 </body>
 </html>
