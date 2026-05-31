@@ -436,7 +436,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     max-width: 900px;
-    margin-top: 48px;
     align-items: start;
   }
   .contact-info h3 {
@@ -980,6 +979,27 @@
     footer { flex-direction: column; align-items: flex-start; gap: 16px; padding: 32px 20px; margin-top: 40px; }
   }
 
+  /* ── MAILERLITE OVERRIDES ── */
+  .ml-embedded .ml-form-embedWrapper {
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: auto !important;
+    max-width: 480px !important;
+  }
+  .ml-embedded .ml-form-embedBody {
+    padding: 0 !important;
+  }
+  .ml-embedded .ml-form-embedContent {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .ml-embedded .ml-form-embedContent h4,
+  .ml-embedded .ml-form-embedContent p {
+    display: none !important;
+  }
+
   /* ── SCROLLBAR ── */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--black); }
@@ -1105,7 +1125,7 @@
   <div id="newsletter-strip" class="newsletter-strip">
     <div>
       <h4>The Drop</h4>
-      <p>First access to new events, and tips to improve your shoots. No spam, unsubscribe any time.</p>
+      <p>First access to new events, and tips to improve your shoots.</p>
     </div>
     <div class="newsletter-mailerlite">
       <div class="ml-embedded" data-form="hLF69d"></div>
