@@ -763,7 +763,7 @@ footer {
   .vs-identity-right { align-items: flex-start; }
   .vs-chips { align-items: flex-start; }
 
-  .page-content { padding-top: 60px; }
+  .page-content { padding-top: 80px; }
   .page-header { margin-bottom: 32px; }
 
   .event-row { grid-template-columns: 80px 1fr; gap: 16px; }
