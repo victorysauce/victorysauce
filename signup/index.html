@@ -30,7 +30,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
 <div class="mobile-menu" id="mobile-menu">
   <ul class="mobile-menu-links">
     <li><a href="/events">Events</a></li>
@@ -39,13 +38,14 @@
   </ul>
 </div>
 <div class="page-content">
-  <div style="padding: 80px 40px 40px; max-width: 560px;">
+  <div style="padding:0 40px 40px; max-width:560px;">
     <div class="page-header">
       <h1>The Drop</h1>
       <p class="sub">First access to new events and tips to improve your shoots</p>
     </div>
     <div class="ml-embedded" data-form="hLF69d"></div>
   </div>
+</div>
 <footer>
   <div class="footer-logo">Victory Sauce</div>
   <div class="footer-copy">© 2026 Victory Sauce</div>
@@ -55,23 +55,18 @@
     <a href="/privacy">Privacy</a>
   </div>
 </footer>
-</div>
 <script>
-  const hamburger = document.getElementById('nav-hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', function() {
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
     this.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
+    document.getElementById('mobile-menu').classList.toggle('open');
   });
 </script>
-<!-- MailerLite Universal -->
 <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2333565');
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
+l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+n.parentNode.insertBefore(l,n);})(window,document,'script',
+'https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2333565');
 </script>
-<!-- End MailerLite Universal -->
 </body>
 </html>
