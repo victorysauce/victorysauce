@@ -62,7 +62,7 @@
       </div>
       <div class="contact-form">
         <form id="contact-form" action="https://formspree.io/f/xqengyqe" method="POST">
-          <input type="hidden" name="_subject" value="Contact — Victory Sauce">
+          <input type="hidden" name="_subject" id="form-subject" value="Contact — Victory Sauce">
           <div class="form-row">
             <label>Name</label>
             <input type="text" name="name" required>
@@ -73,7 +73,7 @@
           </div>
           <div class="form-row">
             <label>Subject</label>
-            <select name="subject">
+            <select name="enquiry_type" id="enquiry-type">
               <option>Workshop Booking</option>
               <option>Press Enquiry</option>
               <option>Venue / Partnership</option>
@@ -118,6 +118,14 @@
   });
 </script>
 <script>
+  const enquiryType = document.getElementById('enquiry-type');
+  const formSubject = document.getElementById('form-subject');
+  if (enquiryType && formSubject) {
+    enquiryType.addEventListener('change', function() {
+      formSubject.value = 'Victory Sauce — ' + this.value;
+    });
+  }
+
   const contactForm = document.getElementById('contact-form');
   contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
