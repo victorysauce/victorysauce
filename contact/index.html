@@ -61,7 +61,7 @@
         </a>
       </div>
       <div class="contact-form">
-        <form action="https://formspree.io/f/xqengyqe" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xqengyqe" method="POST">
           <input type="hidden" name="_subject" value="Contact — Victory Sauce">
           <div class="form-row">
             <label>Name</label>
@@ -100,10 +100,52 @@
     <a href="/privacy">Privacy</a>
   </div>
 </footer>
-<script>
-  document.getElementById('nav-hamburger').addEventListener('click', function() {
+<style>
+  .form-success {
+    font-size: 15px;
+    color: var(--teal, #0EC4B0);
+    padding: 24px 0;
+  }
+  .form-error {
+    font-size: 13px;
+    color: var(--pink, #E8396A);
+    margin-top: 12px;
+  }
+</style>
+<script>.addEventListener('click', function() {
     this.classList.toggle('open');
     document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
+<script>
+  const contactForm = document.getElementById('contact-form');
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        contactForm.innerHTML = '<p class="form-success">Message sent — we\'ll be in touch.</p>';
+      } else {
+        throw new Error();
+      }
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'Send';
+      const existing = contactForm.querySelector('.form-error');
+      if (!existing) {
+        const err = document.createElement('p');
+        err.className = 'form-error';
+        err.textContent = 'Something went wrong. Try emailing hello@victorysauce.com directly.';
+        contactForm.appendChild(err);
+      }
+    }
   });
 </script>
 </body>
