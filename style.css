@@ -21,7 +21,7 @@ body {
   background: var(--black);
   color: var(--cream);
   font-family: var(--sans);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   cursor: default;
   overflow-x: hidden;
@@ -71,7 +71,7 @@ nav {
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.55);
+  color: rgba(13,13,13,0.72);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -118,7 +118,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.45);
+  color: rgba(13,13,13,0.65);
 }
 
 /* ── BUTTONS ── */
@@ -203,10 +203,10 @@ nav {
   color: var(--black);
   margin-bottom: 4px;
 }
-.event-details { font-size: 13px; color: rgba(13,13,13,0.55); }
+.event-details { font-size: 14px; color: rgba(13,13,13,0.72); }
 .event-tag {
   font-family: var(--oswald);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 5px 14px;
@@ -218,7 +218,7 @@ nav {
   transition: border-color 0.2s, color 0.2s;
 }
 .event-row:hover .event-tag { border-color: var(--black); }
-.event-tag.free { background: transparent; border: 1.5px solid rgba(13,13,13,0.25); color: rgba(13,13,13,0.55); }
+.event-tag.free { background: transparent; border: 1.5px solid rgba(13,13,13,0.25); color: rgba(13,13,13,0.72); }
 .event-tag.sold-out { background: transparent; border: 1.5px solid rgba(13,13,13,0.15); color: rgba(13,13,13,0.4); }
 
 .luma-embed {
@@ -265,7 +265,7 @@ nav {
 }
 .blog-date {
   font-family: var(--oswald);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--teal);
@@ -310,7 +310,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.45);
+  color: rgba(13,13,13,0.65);
   margin-bottom: 20px;
 }
 .contact-info p {
@@ -331,10 +331,10 @@ nav {
 .contact-link:hover { gap: 20px; }
 .contact-link-label {
   font-family: var(--oswald);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.45);
+  color: rgba(13,13,13,0.65);
   width: 80px;
 }
 .contact-link-value { font-size: 14px; color: var(--black); }
@@ -346,10 +346,10 @@ nav {
 .form-row label {
   display: block;
   font-family: var(--oswald);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.45);
+  color: rgba(13,13,13,0.65);
   margin-bottom: 8px;
 }
 .form-row input,
@@ -378,7 +378,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.45);
+  color: rgba(13,13,13,0.65);
   margin: 32px 0 12px;
 }
 .privacy-body p {
@@ -413,7 +413,7 @@ nav {
 
 /* ── FOOTER ── */
 footer {
-  border-top: 1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid rgba(255,255,255,0.15);
   padding: 40px;
   display: flex;
   justify-content: space-between;
@@ -425,16 +425,16 @@ footer {
   font-size: 16px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(242,237,227,0.6);
+  color: rgba(242,237,227,0.8);
 }
-.footer-copy { font-size: 12px; color: rgba(242,237,227,0.55); letter-spacing: 0.04em; }
+.footer-copy { font-size: 13px; color: rgba(242,237,227,0.7); letter-spacing: 0.04em; }
 .footer-links { display: flex; gap: 24px; }
 .footer-links a {
   font-family: var(--oswald);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(242,237,227,0.55);
+  color: rgba(242,237,227,0.75);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -507,7 +507,7 @@ footer {
   inset: 0;
   background:
     linear-gradient(to top, rgba(13,13,13,0.88) 0%, rgba(13,13,13,0.25) 45%, transparent 100%),
-    linear-gradient(to right, rgba(13,13,13,0.45) 0%, transparent 65%);
+    linear-gradient(to right, rgba(13,13,13,0.65) 0%, transparent 65%);
   z-index: 1;
 }
 .workshop-hero-content {
@@ -567,7 +567,7 @@ footer {
 }
 .wh-meta-label {
   font-family: var(--oswald);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(242,237,227,0.55);
@@ -619,10 +619,10 @@ footer {
 }
 .wf-label {
   font-family: var(--oswald);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.45);
+  color: rgba(13,13,13,0.65);
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -659,10 +659,10 @@ footer {
 }
 .wf-detail-label {
   font-family: var(--oswald);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.45);
+  color: rgba(13,13,13,0.65);
   margin-bottom: 5px;
 }
 .wf-detail-value {
@@ -699,7 +699,7 @@ footer {
 }
 .wf-photographer-card-sub {
   font-size: 11px;
-  color: rgba(13,13,13,0.45);
+  color: rgba(13,13,13,0.65);
   margin-top: 2px;
 }
 .wf-info .btn-outline {
