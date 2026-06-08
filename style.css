@@ -53,7 +53,7 @@ nav {
 }
 .nav-logo {
   font-family: var(--oswald);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 22px;
   letter-spacing: 0.08em;
   color: var(--black);
@@ -428,7 +428,7 @@ footer {
   text-decoration: none;
   transition: color 0.2s;
 }
-.footer-links a:hover { color: var(--teal); }
+.footer-links a:hover { color: #fff; }
 
 /* ── HAMBURGER ── */
 .nav-hamburger {
@@ -706,6 +706,7 @@ footer {
   justify-content: space-between;
   gap: 40px;
   background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.2);
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .hero-eyebrow {
