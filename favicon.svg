@@ -1,5 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#0D0D0D"/>
-  <text x="2" y="24" font-family="'Oswald', 'Arial Narrow', sans-serif" font-weight="400" font-size="22" fill="#F2EDE3" letter-spacing="-0.5">V</text>
-  <text x="14" y="24" font-family="'Oswald', 'Arial Narrow', sans-serif" font-weight="400" font-size="22" fill="#F06090" letter-spacing="-0.5">S</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <text
+    x="50"
+    y="76"
+    font-family="'Oswald', 'Arial Narrow', sans-serif"
+    font-weight="700"
+    font-size="62"
+    letter-spacing="-2"
+    text-anchor="middle"
+    fill="#0D0D0D"
+  >VS</text>
 </svg>
