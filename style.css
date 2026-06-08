@@ -49,11 +49,11 @@ nav {
   padding: 18px 40px;
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .nav-logo {
   font-family: var(--oswald);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 22px;
   letter-spacing: 0.08em;
   color: var(--black);
@@ -81,7 +81,7 @@ nav {
   color: var(--blue);
   border: 1.5px solid var(--blue);
   padding: 6px 16px;
-  font-weight: 700;
+  font-weight: 400;
   transition: background 0.2s, color 0.2s;
 }
 .nav-links a.nav-cta:hover {
