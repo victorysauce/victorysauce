@@ -100,12 +100,13 @@ nav {
   min-height: 100vh;
 }
 .page-header {
+  margin-top: 48px;
   margin-bottom: 48px;
 }
 .page-header h1 {
   font-family: var(--oswald);
   font-weight: 700;
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(28px, 3.5vw, 48px);
   text-transform: uppercase;
   letter-spacing: -0.01em;
   color: var(--black);
@@ -169,7 +170,7 @@ nav {
 .events-intro {
   max-width: 600px;
   margin-bottom: 48px;
-  color: rgba(242,237,227,0.6);
+  color: rgba(13,13,13,0.65);
   font-size: 15px;
   line-height: 1.75;
 }
@@ -180,7 +181,7 @@ nav {
   gap: 24px;
   align-items: start;
   padding: 28px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   transition: padding-left 0.2s;
   cursor: pointer;
 }
@@ -190,7 +191,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--black);
   line-height: 1.6;
 }
 .event-name {
@@ -199,23 +200,26 @@ nav {
   font-size: 20px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--cream);
+  color: var(--black);
   margin-bottom: 4px;
 }
-.event-details { font-size: 13px; color: rgba(242,237,227,0.55); }
+.event-details { font-size: 13px; color: rgba(13,13,13,0.55); }
 .event-tag {
   font-family: var(--oswald);
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 4px 12px;
-  background: var(--pink);
-  color: var(--cream);
+  padding: 5px 14px;
+  background: transparent;
+  border: 1.5px solid rgba(13,13,13,0.25);
+  color: var(--black);
   white-space: nowrap;
   align-self: center;
+  transition: border-color 0.2s, color 0.2s;
 }
-.event-tag.free { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: rgba(242,237,227,0.55); }
-.event-tag.sold-out { background: rgba(255,255,255,0.08); color: rgba(242,237,227,0.55); }
+.event-row:hover .event-tag { border-color: var(--black); }
+.event-tag.free { background: transparent; border: 1.5px solid rgba(13,13,13,0.25); color: rgba(13,13,13,0.55); }
+.event-tag.sold-out { background: transparent; border: 1.5px solid rgba(13,13,13,0.15); color: rgba(13,13,13,0.4); }
 
 .luma-embed {
   margin-bottom: 48px;
