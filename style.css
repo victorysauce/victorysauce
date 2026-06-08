@@ -585,7 +585,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 70vh;
-  border-bottom: 1px solid rgba(255,255,255,0.14);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .wf-images {
   display: grid;
@@ -715,13 +715,12 @@ footer {
   color: var(--teal);
   text-transform: uppercase;
   margin-bottom: 16px;
-  transform: rotate(-1deg);
   display: inline-block;
 }
 .vs-identity-title {
   font-family: var(--oswald);
   font-weight: 700;
-  font-size: clamp(56px, 9vw, 120px);
+  font-size: clamp(36px, 5.5vw, 72px);
   line-height: 0.85;
   text-transform: uppercase;
   letter-spacing: -0.01em;
@@ -730,10 +729,10 @@ footer {
 .vs-identity-title .line1 { color: var(--black); display: block; }
 .vs-identity-title .line2 {
   display: block;
-  -webkit-text-stroke: 2px var(--pink);
+  -webkit-text-stroke: 2px var(--black);
   color: transparent;
 }
-.vs-identity-title .line2.filled { color: var(--pink); -webkit-text-stroke: 0; }
+.vs-identity-title .line2.filled { color: var(--black); -webkit-text-stroke: 0; }
 .vs-identity-sub {
   font-size: 14px;
   color: rgba(242,237,227,0.55);
@@ -756,6 +755,15 @@ footer {
   color: rgba(13,13,13,0.65);
   max-width: 340px;
   text-align: right;
+}
+.vs-identity .btn-primary {
+  background: transparent;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+}
+.vs-identity .btn-primary:hover {
+  background: var(--blue);
+  color: #fff;
 }
 .vs-chips {
   display: flex;
