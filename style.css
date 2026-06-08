@@ -382,7 +382,7 @@ nav {
 
 /* ── NEWSLETTER STRIP ── */
 .newsletter-strip {
-  background: var(--teal);
+  background: #EBEBEB;
   padding: 48px 40px;
   display: flex;
   align-items: center;
