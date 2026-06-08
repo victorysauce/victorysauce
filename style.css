@@ -88,10 +88,16 @@ nav {
   background: var(--blue);
   color: #fff;
 }
+.nav-links a.nav-cta.active {
+  background: var(--blue);
+  color: #fff;
+}
 
 /* ── PAGE WRAPPER ── */
 .page-content {
   padding-top: 72px;
+  background: #fff;
+  min-height: 100vh;
 }
 .page-header {
   margin-bottom: 48px;
@@ -102,7 +108,7 @@ nav {
   font-size: clamp(40px, 6vw, 72px);
   text-transform: uppercase;
   letter-spacing: -0.01em;
-  color: var(--cream);
+  color: var(--black);
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -111,7 +117,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: rgba(13,13,13,0.45);
 }
 
 /* ── BUTTONS ── */
