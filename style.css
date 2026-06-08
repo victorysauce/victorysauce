@@ -604,15 +604,15 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #111;
-  border-left: 1px solid rgba(255,255,255,0.06);
+  background: #fff;
+  border-left: 1px solid rgba(0,0,0,0.08);
 }
 .wf-label {
   font-family: var(--oswald);
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(242,237,227,0.55);
+  color: rgba(13,13,13,0.45);
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -626,7 +626,7 @@ footer {
   line-height: 0.9;
   text-transform: uppercase;
   letter-spacing: -0.01em;
-  color: var(--cream);
+  color: var(--black);
   margin-bottom: 24px;
 }
 .wf-bio {
@@ -634,7 +634,7 @@ footer {
   font-style: italic;
   font-size: 15px;
   line-height: 1.7;
-  color: rgba(242,237,227,0.8);
+  color: rgba(13,13,13,0.65);
   margin-bottom: 28px;
   max-width: 400px;
 }
@@ -643,8 +643,8 @@ footer {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 24px 0;
-  border-top: 1px solid rgba(255,255,255,0.07);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   margin-bottom: 24px;
 }
 .wf-detail-label {
@@ -652,7 +652,7 @@ footer {
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(242,237,227,0.55);
+  color: rgba(13,13,13,0.45);
   margin-bottom: 5px;
 }
 .wf-detail-value {
@@ -660,7 +660,7 @@ footer {
   font-size: 13px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--cream);
+  color: var(--black);
   line-height: 1.4;
 }
 .wf-bottom {
@@ -678,20 +678,25 @@ footer {
   object-position: center top;
   display: block;
   flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(0,0,0,0.15);
 }
 .wf-photographer-card-name {
   font-family: var(--oswald);
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--cream);
+  color: var(--black);
 }
 .wf-photographer-card-sub {
   font-size: 11px;
-  color: rgba(242,237,227,0.55);
+  color: rgba(13,13,13,0.45);
   margin-top: 2px;
 }
+.wf-info .btn-outline {
+  color: var(--black);
+  border-color: rgba(13,13,13,0.25);
+}
+.wf-info .btn-outline:hover { border-color: var(--pink); color: var(--pink); }
 
 /* ── VS IDENTITY ── */
 .vs-identity {
