@@ -46,7 +46,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 40px;
+  padding: 18px max(40px, calc((100vw - 1440px) / 2));
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -383,7 +383,7 @@ nav {
 /* ── NEWSLETTER STRIP ── */
 .newsletter-strip {
   background: #EBEBEB;
-  padding: 48px 40px;
+  padding: 48px max(40px, calc((100vw - 1440px) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -404,7 +404,7 @@ nav {
 /* ── FOOTER ── */
 footer {
   border-top: 1px solid rgba(255,255,255,0.07);
-  padding: 40px;
+  padding: 40px max(40px, calc((100vw - 1440px) / 2));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -505,6 +505,8 @@ footer {
   z-index: 2;
   padding: 0 40px 72px;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-end;
@@ -700,7 +702,7 @@ footer {
 
 /* ── VS IDENTITY ── */
 .vs-identity {
-  padding: 80px 40px;
+  padding: 80px max(40px, calc((100vw - 1440px) / 2));
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
