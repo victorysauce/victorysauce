@@ -295,6 +295,64 @@ nav {
 }
 .event-prose p:last-child { margin-bottom: 0; }
 
+/* SCHEDULE */
+.schedule-section {
+  margin-bottom: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.schedule-date {
+  font-family: var(--oswald);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.schedule-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  max-width: 580px;
+}
+.schedule-time {
+  font-family: var(--oswald);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(13,13,13,0.65);
+  padding-top: 2px;
+  white-space: nowrap;
+}
+.schedule-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(13,13,13,0.72);
+}
+
+/* BRING LIST */
+.bring-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 580px;
+}
+.bring-list li {
+  font-size: 14px;
+  color: rgba(13,13,13,0.65);
+  padding: 10px 0 10px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+  line-height: 1.5;
+}
+.bring-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: rgba(13,13,13,0.4);
+}
+
 /* WHAT YOU'LL LEARN */
 .learn-section {
   margin-bottom: 48px;
@@ -725,6 +783,27 @@ document.addEventListener('keydown', function(e) {
     </div>
 
     <div class="learn-section">
+      <div class="learn-label">Schedule</div>
+      <div class="schedule-date">Saturday 25 July 2026</div>
+      <div class="schedule-row">
+        <div class="schedule-time">9:00</div>
+        <div class="schedule-desc">Meet at Miradouro de São Pedro de Alcântara</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">9:00 – 12:00</div>
+        <div class="schedule-desc">The group swaps roles as photographer and subject. Will teaches as you go: how to direct, how to read a setting, how to troubleshoot on the fly.</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">12:00 – 13:00</div>
+        <div class="schedule-desc">Lunch break — solo or with the group</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">13:00 – 16:00</div>
+        <div class="schedule-desc">Afternoon session at Absent, Rua da Glória 78. Review the morning's shots and get inside Will's editing process: how he selects, sequences, and builds that signature high-saturation look.</div>
+      </div>
+    </div>
+
+    <div class="learn-section">
       <div class="learn-label">What you'll learn</div>
       <div class="learn-item">
         <div class="learn-name">Direct with confidence</div>
@@ -741,6 +820,23 @@ document.addEventListener('keydown', function(e) {
       <div class="learn-item">
         <div class="learn-name">Colour-first editing</div>
         <div class="learn-desc">A walkthrough of Will's post-production workflow: how he selects, sequences, and processes images for that high-saturation, joyful look that defines his work.</div>
+      </div>
+    </div>
+
+    <div class="learn-section">
+      <div class="learn-label">What to Bring</div>
+      <ul class="bring-list">
+        <li>Your camera (any system)</li>
+        <li>Something colourful to wear. You'll be in front of the lens too.</li>
+        <li>Spare batteries and memory cards</li>
+        <li>Comfortable shoes</li>
+      </ul>
+    </div>
+
+    <div class="learn-section">
+      <div class="learn-label">Who Should Attend</div>
+      <div class="learn-item">
+        <div class="learn-desc">This workshop is for anyone who wants to make more confident, expressive portraits, whether you shoot editorial, lifestyle, or personal work. You don't need commercial experience. If you're drawn to vivid, joyful, colour-led photography and want to understand how a working photographer builds a signature look from the street to the edit, this day is for you.</div>
       </div>
     </div>
 
