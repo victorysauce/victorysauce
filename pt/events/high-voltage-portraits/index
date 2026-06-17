@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will Bremridge: High Voltage Portraits — Victory Sauce</title>
+<meta name="description" content="Um workshop de retrato de um dia inteiro com Will Bremridge em Lisboa. 3h de caminhada fotográfica + 3h de workshop. Aprende a dirigir com confiança. €150 · Máx. 12 participantes.">
+<link rel="canonical" href="https://victorysauce.com/pt/events/high-voltage-portraits">
+<link rel="alternate" hreflang="en" href="https://victorysauce.com/events/high-voltage-portraits">
+<link rel="alternate" hreflang="pt" href="https://victorysauce.com/pt/events/high-voltage-portraits">
+<meta property="og:title" content="Will Bremridge: High Voltage Portraits — Victory Sauce">
+<meta property="og:description" content="Um workshop de retrato de um dia inteiro com Will Bremridge em Lisboa. 3h de caminhada fotográfica + 3h de workshop. €150 · Máx. 12 participantes.">
+<meta property="og:image" content="https://victorysauce.com/images/Will-Bremridge-072A7028web.webp">
+<meta property="og:url" content="https://victorysauce.com/pt/events/high-voltage-portraits">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #2448C8;
+  --teal: #0EC4B0;
+  --pink: #E8396A;
+  --yellow: #F5C400;
+  --cream: #F2EDE3;
+  --black: #0D0D0D;
+  --mid: #111111;
+  --rule: rgba(255,255,255,0.07);
+  --rule-strong: rgba(255,255,255,0.14);
+  --oswald: 'Oswald', sans-serif;
+  --sans: 'Source Sans 3', sans-serif;
+  --serif: 'Source Serif 4', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+}
+.nav-logo {
+  font-family: var(--oswald);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+}
+.nav-back {
+  font-family: var(--oswald);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(13,13,13,0.65);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s, gap 0.2s;
+}
+.nav-back::before { content: '←'; }
+.nav-back:hover { color: var(--black); gap: 12px; }
+.nav-book {
+  font-family: var(--oswald);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 20px;
+  transition: background 0.2s;
+}
+.nav-book:hover { background: var(--teal); color: var(--black); }
+
+/* ── HERO ── */
+.event-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+  display: flex;
+  align-items: flex-end;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/Will-Bremridge-Jay-Johnson.webp');
+  background-size: cover;
+  background-position: center top;
+}
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.35) 45%, transparent 100%),
+    linear-gradient(to right, rgba(13,13,13,0.5) 0%, transparent 65%);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 48px 72px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  gap: 48px;
+}
+.hero-eyebrow {
+  font-family: var(--oswald);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(242,237,227,0.8);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--pink); }
+.hero-photographer {
+  font-family: var(--oswald);
+  font-weight: 300;
+  font-size: clamp(14px, 1.5vw, 18px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(242,237,227,0.8);
+  margin-bottom: 10px;
+}
+.hero-title {
+  font-family: var(--oswald);
+  font-weight: 700;
+  font-size: clamp(52px, 7.5vw, 100px);
+  line-height: 0.87;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+  margin-bottom: 36px;
+}
+.hero-title .hollow {
+  -webkit-text-stroke: 1.5px rgba(242,237,227,0.55);
+  color: transparent;
+  display: block;
+}
+.hero-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.hero-tag {
+  font-family: var(--oswald);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(242,237,227,0.65);
+}
+.hero-tag.highlight { background: var(--pink); border-color: var(--pink); color: var(--cream); }
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.hero-meta {
+  text-align: right;
+  border-right: 2px solid rgba(242,237,227,0.1);
+  padding-right: 20px;
+}
+.hero-meta-label {
+  font-family: var(--oswald);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(242,237,227,0.85);
+  margin-bottom: 5px;
+}
+.hero-meta-value {
+  font-family: var(--oswald);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 1.4;
+}
+.hero-price {
+  font-family: var(--oswald);
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--teal);
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--oswald);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 32px;
+  transition: background 0.2s;
+}
+.hero-cta:hover { background: var(--teal); color: var(--black); }
+
+/* ── GALLERY ── */
+.gallery-section {
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.gallery-masonry {
+  columns: 3;
+  gap: 3px;
+  background: var(--black);
+}
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 3px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s, transform 0.4s ease;
+}
+.gallery-item:hover img { opacity: 0.85; transform: scale(1.02); }
+.gallery-item-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 8px 12px;
+  background: linear-gradient(to top, rgba(13,13,13,0.8), transparent);
+  font-size: 13px;
+  color: rgba(242,237,227,0.75);
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.gallery-item:hover .gallery-item-caption { opacity: 1; }
+
+/* ── BODY ── */
+.event-body {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+/* LEFT: TEXT */
+.event-text {
+  padding: 64px 56px 80px;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+.event-statement {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.5;
+  color: var(--black);
+  margin-bottom: 48px;
+  max-width: 600px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.event-prose {
+  margin-bottom: 48px;
+}
+.event-prose p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(13,13,13,0.65);
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+.event-prose p:last-child { margin-bottom: 0; }
+
+/* SCHEDULE */
+.schedule-section {
+  margin-bottom: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.schedule-date {
+  font-family: var(--oswald);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.schedule-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  max-width: 580px;
+}
+.schedule-time {
+  font-family: var(--oswald);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(13,13,13,0.65);
+  padding-top: 2px;
+  white-space: nowrap;
+}
+.schedule-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(13,13,13,0.72);
+}
+
+/* BRING LIST */
+.bring-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 580px;
+}
+.bring-list li {
+  font-size: 14px;
+  color: rgba(13,13,13,0.65);
+  padding: 10px 0 10px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+  line-height: 1.5;
+}
+.bring-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: rgba(13,13,13,0.4);
+}
+
+/* WHAT YOU'LL LEARN */
+.learn-section {
+  margin-bottom: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.learn-label {
+  font-family: var(--oswald);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(13,13,13,0.65);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.learn-label::before { content: ''; display: block; width: 18px; height: 1px; background: var(--pink); }
+.learn-item {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  max-width: 580px;
+}
+.learn-item:first-of-type { border-top: 1px solid rgba(0,0,0,0.08); }
+.learn-name {
+  font-family: var(--oswald);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.learn-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(13,13,13,0.65);
+}
+
+/* ABOUT WILL */
+.about-will {
+  margin-top: 48px;
+  padding: 32px 36px;
+  background: #f5f5f5;
+  border-left: 3px solid var(--blue);
+  max-width: 580px;
+}
+.about-will-label {
+  font-family: var(--oswald);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(13,13,13,0.65);
+  margin-bottom: 16px;
+}
+.about-will-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.about-will-headshot {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+.about-will-name {
+  font-family: var(--oswald);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.about-will-sub {
+  font-size: 12px;
+  color: rgba(13,13,13,0.65);
+  margin-top: 2px;
+}
+.about-will-bio {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(13,13,13,0.65);
+  margin-bottom: 12px;
+}
+.about-will-clients {
+  font-size: 12px;
+  color: rgba(13,13,13,0.65);
+  letter-spacing: 0.02em;
+  font-style: italic;
+}
+
+/* RIGHT: SIDEBAR */
+.event-sidebar {
+  padding: 64px 40px;
+  position: sticky;
+  top: 64px;
+  align-self: start;
+  background: #fff;
+  border-left: 1px solid rgba(0,0,0,0.08);
+}
+
+.sidebar-book {
+  background: var(--blue);
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.sidebar-book-price {
+  font-family: var(--oswald);
+  font-weight: 700;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.sidebar-book-note {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 16px;
+}
+.sidebar-book-btn {
+  display: block;
+  font-family: var(--oswald);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: #fff;
+  color: var(--black);
+  text-decoration: none;
+  padding: 12px;
+  transition: background 0.2s;
+}
+.sidebar-book-btn:hover { background: #f0f0f0; }
+
+.specs-section { margin-bottom: 40px; }
+.specs-label {
+  font-family: var(--oswald);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(13,13,13,0.65);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.specs-label::before { content: ''; display: block; width: 14px; height: 1px; background: var(--pink); }
+.spec-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  font-size: 13px;
+}
+.spec-key {
+  font-family: var(--oswald);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13,13,13,0.65);
+  padding-top: 2px;
+}
+.spec-val { color: var(--black); line-height: 1.5; }
+
+.sidebar-vs {
+  padding-top: 32px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-size: 13px;
+  color: rgba(13,13,13,0.72);
+  line-height: 1.7;
+}
+.sidebar-vs strong { color: var(--black); font-weight: 500; }
+.sidebar-vs a { color: var(--blue); text-decoration: none; }
+.sidebar-vs a:hover { text-decoration: underline; }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding: 40px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  font-family: var(--oswald);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(242,237,227,0.8);
+}
+.footer-copy { font-size: 13px; color: rgba(242,237,227,0.7); letter-spacing: 0.04em; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a {
+  font-family: var(--oswald);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(242,237,227,0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: #fff; }
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(13,13,13,0.97);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+.lightbox-img { max-width: 88vw; max-height: 80vh; object-fit: contain; display: block; }
+.lightbox-caption {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: rgba(242,237,227,0.65);
+  font-style: italic;
+  margin-top: 14px;
+  text-align: center;
+}
+.lightbox-counter {
+  font-family: var(--oswald);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(242,237,227,0.25);
+  margin-top: 6px;
+}
+.lightbox-close {
+  position: fixed;
+  top: 24px; right: 32px;
+  background: none;
+  border: none;
+  color: rgba(242,237,227,0.5);
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 1001;
+  line-height: 1;
+}
+.lightbox-close:hover { color: var(--cream); }
+.lightbox-prev, .lightbox-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(242,237,227,0.8);
+  font-size: 20px;
+  width: 48px; height: 48px;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-prev:hover, .lightbox-next:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.4);
+  color: var(--cream);
+}
+
+/* ── BODY NOISE ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.35;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-back span { display: none; }
+  .hero-content { grid-template-columns: 1fr; padding: 0 20px 48px; }
+  .hero-right { display: none; }
+  .hero-title { font-size: clamp(48px, 14vw, 72px); }
+  .gallery-masonry { columns: 2; }
+  .event-body { grid-template-columns: 1fr; }
+  .event-text { padding: 40px 20px 48px; border-right: none; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .event-sidebar { padding: 40px 20px; position: static; }
+  footer { flex-direction: column; align-items: flex-start; gap: 16px; padding: 32px 20px; }
+}
+</style>
+</head>
+<body>
+
+<script>
+const images = [
+  { src: '/images/Will-Bremridge-072A7028web.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/Lifestyle-Photographer-London-Will-Bremridge-Amaroun.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/Will-Bremridge-Jay-Johnson.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/Will-Bremridge-M1A4465.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/Will-Bremridge-M1A5817.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/Will-Bremridge-09.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/_M1A6516-Edit.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/MJM-website.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/breeze-gif.webp', caption: 'Fotografia de Will Bremridge' },
+  { src: '/images/Will-Bremridge-Skipping.webp', caption: 'Fotografia de Will Bremridge' },
+];
+let current = 0;
+function openLightbox(idx) {
+  current = idx;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeLightboxOutside(e) {
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
+}
+function updateLightbox() {
+  document.getElementById('lightboxImg').src = images[current].src;
+  document.getElementById('lightboxCaption').textContent = images[current].caption;
+  document.getElementById('lightboxCounter').textContent = (current + 1) + ' / ' + images.length;
+}
+function nextImage(e) { e.stopPropagation(); current = (current + 1) % images.length; updateLightbox(); }
+function prevImage(e) { e.stopPropagation(); current = (current - 1 + images.length) % images.length; updateLightbox(); }
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'ArrowRight') { current = (current + 1) % images.length; updateLightbox(); }
+  if (e.key === 'ArrowLeft') { current = (current - 1 + images.length) % images.length; updateLightbox(); }
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+<!-- NAV -->
+<nav>
+  <a href="/pt/" class="nav-logo">Victory Sauce</a>
+  <a href="/pt/events" class="nav-back"><span>Todos os Eventos</span></a>
+  <a href="/events/high-voltage-portraits" class="nav-lang">EN</a>
+  <a href="https://luma.com/t0g7mdzv" target="_blank" class="nav-book">Reserva o Teu Lugar</a>
+</nav>
+
+<!-- HERO -->
+<section class="event-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow">Workshop · Lisboa · Julho 2026</div>
+      <div class="hero-photographer">Will Bremridge</div>
+      <h1 class="hero-title">
+        HIGH<br><span class="hollow">VOLTAGE</span>
+        PORTRAITS
+      </h1>
+    </div>
+    <div class="hero-right">
+      <div class="hero-meta">
+        <div class="hero-meta-label">Data</div>
+        <div class="hero-meta-value">Sábado<br>25 Julho 2026</div>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-label">Formato</div>
+        <div class="hero-meta-value">3h Caminhada<br>+ 3h Workshop</div>
+      </div>
+      <div class="hero-price">€150</div>
+      <a href="https://luma.com/t0g7mdzv" target="_blank" class="hero-cta">Reserva o Teu Lugar</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<div class="gallery-section">
+  <div class="gallery-masonry">
+    <div class="gallery-item" onclick="openLightbox(0)"><img src="/images/Will-Bremridge-072A7028web.webp" alt="A young man in an orange hoodie rests his arms on a white iron fence against a deep red wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(1)"><img src="/images/Lifestyle-Photographer-London-Will-Bremridge-Amaroun.webp" alt="A person in a brown Nike hoodie stands laughing against a vivid purple wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(2)"><img src="/images/Will-Bremridge-Jay-Johnson.webp" alt="A young man in an orange jumper sits on a grey outdoor court wearing white oval sunglasses, smiling. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(3)"><img src="/images/Will-Bremridge-M1A4465.webp" alt="A woman in a yellow t-shirt and lavender shorts sits laughing on the ground wearing roller skates. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(4)"><img src="/images/Will-Bremridge-M1A5817.webp" alt="Two young men sit against a sports net on a yellow-painted outdoor basketball court in bright sunlight. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(5)"><img src="/images/Will-Bremridge-09.webp" alt="Two women laugh and take a selfie against a pink wall, one wearing a yellow beanie and blue jacket. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(6)"><img src="/images/_M1A6516-Edit.webp" alt="A woman in an orange crop top and pink trousers kicks her leg high on a blue outdoor sports court. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(7)"><img src="/images/MJM-website.webp" alt="A man in an open denim shirt stands against a bold orange wall in bright sunlight. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(8)"><img src="/images/breeze-gif.webp" alt="A smiling man in a peach t-shirt with earbuds looks up at a clear blue sky. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+    <div class="gallery-item" onclick="openLightbox(9)"><img src="/images/Will-Bremridge-Skipping.webp" alt="An older man with white hair skips rope shirtless against a vivid teal wall. Photograph by Will Bremridge."><div class="gallery-item-caption">Fotografia de Will Bremridge</div></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+  <button class="lightbox-prev" onclick="prevImage(event)">&#x2190;</button>
+  <button class="lightbox-next" onclick="nextImage(event)">&#x2192;</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="event-body">
+
+  <!-- LEFT: TEXT -->
+  <div class="event-text">
+
+    <p class="event-statement">Leva a tua fotografia a sério, e diverte-te a fazê-lo. Um dia inteiro em Lisboa com um dos fotógrafos de retrato mais energéticos a trabalhar hoje.</p>
+
+    <div class="event-prose">
+      <p>Começamos o dia com aprendizagem ativa, usando as ruas mais fotogénicas de Lisboa como cenário. Vais passar tempo dos dois lados da câmara, alternando os papéis de fotógrafo e modelo, para perceberes melhor como pôr os sujeitos à vontade e dirigir sessões de retrato com confiança. Aprendemos a ler espaços exteriores rapidamente e a resolver problemas em tempo real. Veste algo colorido.</p>
+      <p>Depois do almoço, reunimos novamente no Absent para rever as fotografias da manhã e explorar o processo de edição de Will. Aprende os seus truques para construir aquele look de alta saturação e encontrar a tua própria voz através da cor e da composição.</p>
+      <p>Este workshop está limitado a 12 participantes, para que todos recebam atenção individual de Will e feedback real sobre o seu trabalho.</p>
+    </div>
+
+    <div class="learn-section">
+      <div class="learn-label">Programa</div>
+      <div class="schedule-date">Sábado, 25 de Julho de 2026</div>
+      <div class="schedule-row">
+        <div class="schedule-time">9:00</div>
+        <div class="schedule-desc">Ponto de encontro no Miradouro de São Pedro de Alcântara</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">9:00 – 12:00</div>
+        <div class="schedule-desc">O grupo alterna os papéis de fotógrafo e modelo. Will ensina ao longo do processo: como dirigir, como ler um espaço, como resolver problemas em tempo real.</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">12:00 – 13:00</div>
+        <div class="schedule-desc">Pausa para almoço — a solo ou em grupo</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">13:00 – 16:00</div>
+        <div class="schedule-desc">Sessão da tarde no Absent, Rua da Glória 78. Revemos as fotografias da manhã e exploramos o processo de edição de Will: como seleciona, sequencia e constrói aquele look de alta saturação que o define.</div>
+      </div>
+    </div>
+
+    <div class="learn-section">
+      <div class="learn-label">O Que Vais Aprender</div>
+      <div class="learn-item">
+        <div class="learn-name">Dirigir com Confiança</div>
+        <div class="learn-desc">Como pôr um sujeito à vontade rapidamente e manter a energia alta. A capacidade de Will em tornar qualquer pessoa confortável à frente de uma câmara é o que distingue o seu trabalho — vais aprender como ele o faz.</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-name">Ler um Espaço</div>
+        <div class="learn-desc">Como entrar num espaço desconhecido e perceber imediatamente o que ele oferece: luz, cor, geometria. Lisboa é um dos melhores cenários da Europa para isto.</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-name">Construir uma Prática</div>
+        <div class="learn-desc">Revemos as fotografias da manhã e discutimos como apurar a tua voz única e reconhecível. Como selecionar? O que se corta, e porquê? O objetivo é construir disciplina e discernimento que transforma um estilo numa prática.</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-name">Edição Centrada na Cor</div>
+        <div class="learn-desc">Uma análise do workflow de pós-produção de Will: como seleciona, sequencia e processa imagens para aquele look de alta saturação e alegria que define o seu trabalho.</div>
+      </div>
+    </div>
+
+    <div class="learn-section">
+      <div class="learn-label">O Que Trazer</div>
+      <ul class="bring-list">
+        <li>A tua câmara (qualquer sistema)</li>
+        <li>Algo colorido para vestir. Vais estar à frente da câmara também.</li>
+        <li>Baterias e cartões de memória extra</li>
+        <li>Sapatos confortáveis</li>
+      </ul>
+    </div>
+
+    <div class="learn-section">
+      <div class="learn-label">Para Quem é Este Workshop</div>
+      <div class="learn-item">
+        <div class="learn-desc">Este workshop é para qualquer pessoa que queira fazer retratos mais confiantes e expressivos, seja para editorial, lifestyle ou projetos pessoais. Não precisas de experiência comercial. Se te atrai a fotografia vívida, alegre e com cor como protagonista, e queres perceber como um fotógrafo profissional constrói um look inconfundível da rua até à edição, este dia é para ti.</div>
+      </div>
+    </div>
+
+    <div class="about-will">
+      <div class="about-will-label">Sobre o Fotógrafo</div>
+      <div class="about-will-header">
+        <img src="/images/will-headshot.jpg" alt="Will Bremridge" class="about-will-headshot">
+        <div>
+          <div class="about-will-name"><a href="https://www.willbphoto.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(242,237,227,0.2);">Will Bremridge</a></div>
+          <div class="about-will-sub">Retrato · Viagem · Lifestyle · LDN / LX</div>
+        </div>
+      </div>
+      <p class="about-will-bio">Com base em Londres e em Lisboa, Will Bremridge é um fotógrafo de retrato, viagem e lifestyle que trabalha para marcas, agências de publicidade e revistas. Com forte ênfase nas cores vivas em todos os seus projetos, Will cria trabalho vibrante, alegre e jovem. Dirige a On-Set Portugal, produzindo conteúdo de estética californiana para marcas internacionais numa das cidades europeias com mais sol.</p>
+      <p class="about-will-clients">Clientes incluem AKQA · Virgin Atlantic · Fiat · British GQ · Esquire · Channel 4 · The Sunday Times Magazine · The New York Times Magazine · Sony · Billboard · Wired</p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT: SIDEBAR -->
+  <div class="event-sidebar">
+
+    <div class="specs-section">
+      <div class="specs-label">Detalhes do Evento</div>
+      <div class="spec-row">
+        <span class="spec-key">Data</span>
+        <span class="spec-val">Sábado, 25 de Julho de 2026</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Manhã</span>
+        <span class="spec-val">3h caminhada fotográfica · Miradouro de São Pedro de Alcântara · 9h</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Tarde</span>
+        <span class="spec-val">3h workshop · <a href="https://www.absent.tech/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(242,237,227,0.2);">Absent</a>, Rua da Gl&oacute;ria 78 · 13h</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Vagas</span>
+        <span class="spec-val">Máx. 12 participantes</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Nível</span>
+        <span class="spec-val">Todos os níveis</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Trazer</span>
+        <span class="spec-val">A tua câmara (qualquer sistema) · Veste algo colorido</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Idioma</span>
+        <span class="spec-val">Inglês</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Preço</span>
+        <span class="spec-val">€150 por pessoa</span>
+      </div>
+    </div>
+
+    <div class="sidebar-book">
+      <div class="sidebar-book-price">€150</div>
+      <div class="sidebar-book-note">Por pessoa · Todos os níveis</div>
+      <a href="https://luma.com/t0g7mdzv" target="_blank" class="sidebar-book-btn">Reserva o Teu Lugar →</a>
+    </div>
+
+    <div class="sidebar-vs">
+      <p>Organizado pela <strong>Victory Sauce</strong> — uma comunidade fotográfica baseada em Lisboa. Dúvidas? <a href="https://victorysauce.com/pt/contact">Fala connosco.</a></p>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Victory Sauce</div>
+  <div class="footer-copy">© 2026 Victory Sauce</div>
+  <div class="footer-links">
+    <a href="https://luma.com/victorysauce" target="_blank">Eventos</a>
+    <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+    <a href="/pt/privacy">Privacidade</a>
+  </div>
+</footer>
+
+</body>
+</html>
