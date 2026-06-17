@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Victory Sauce</title>
+<meta name="description" content="Reservas de workshops, imprensa, parcerias com espaços e patrocínios para a Victory Sauce.">
+<link rel="canonical" href="https://victorysauce.com/pt/contact">
+<link rel="alternate" hreflang="en" href="https://victorysauce.com/contact">
+<link rel="alternate" hreflang="pt" href="https://victorysauce.com/pt/contact">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Victory Sauce">
+<meta property="og:url" content="https://victorysauce.com/pt/contact">
+<meta property="og:title" content="Contacto — Victory Sauce">
+<meta property="og:description" content="Reservas de workshops, imprensa, parcerias com espaços e patrocínios para a Victory Sauce.">
+<meta property="og:image" content="https://victorysauce.com/images/Bubble_Stars.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@victory_sauce">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/pt/">Victory Sauce</a>
+  <ul class="nav-links">
+    <li><a href="/pt/signup">Inscreve-te</a></li>
+    <li><a href="/pt/contact" class="active">Contacto</a></li>
+    <li><a href="/pt/events" class="nav-cta">Eventos</a></li>
+    <li><a href="/contact" class="nav-lang">EN</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="/pt/events" class="nav-cta">Eventos</a></li>
+    <li><a href="/pt/signup">Inscreve-te</a></li>
+    <li><a href="/pt/contact" class="active">Contacto</a></li>
+    <li><a href="/contact" class="nav-lang">EN</a></li>
+  </ul>
+</div>
+<div class="page-content">
+  <div style="padding:0 40px 40px;">
+    <div class="page-header">
+      <h1>Contacto</h1>
+      <p class="sub">Reservas &middot; Imprensa &middot; Parcerias</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Fala Connosco</h3>
+        <p>Reservas de workshops, pedidos de imprensa, parcerias com espaços e patrocínios. Usa o formulário ou entra em contacto diretamente.</p>
+        <a class="contact-link" href="mailto:hello@victorysauce.com">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">hello@victorysauce.com</span>
+        </a>
+        <a class="contact-link" href="https://instagram.com/victory_sauce" target="_blank">
+          <span class="contact-link-label">Instagram</span>
+          <span class="contact-link-value">@victory_sauce</span>
+        </a>
+        <a class="contact-link" href="https://luma.com/victorysauce" target="_blank">
+          <span class="contact-link-label">Eventos</span>
+          <span class="contact-link-value">luma.com/victorysauce</span>
+        </a>
+      </div>
+      <div class="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/xqengyqe" method="POST">
+          <input type="hidden" name="_subject" id="form-subject" value="Contacto — Victory Sauce">
+          <div class="form-row">
+            <label>Nome</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label>Assunto</label>
+            <select name="enquiry_type" id="enquiry-type">
+              <option value="Workshop Booking">Reserva de Workshop</option>
+              <option value="Press Enquiry">Pedido de Imprensa</option>
+              <option value="Venue / Partnership">Espaço / Parceria</option>
+              <option value="Sponsorship">Patrocínio</option>
+              <option value="Other">Outro</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Mensagem</label>
+            <textarea name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">Victory Sauce</div>
+  <div class="footer-copy">&copy; 2026 Victory Sauce</div>
+  <div class="footer-links">
+    <a href="https://luma.com/victorysauce" target="_blank">Eventos</a>
+    <a href="https://instagram.com/victory_sauce" target="_blank">Instagram</a>
+    <a href="/pt/privacy">Privacidade</a>
+  </div>
+</footer>
+<style>
+  .form-success { font-size: 15px; color: var(--teal, #0EC4B0); padding: 24px 0; }
+  .form-error { font-size: 13px; color: var(--pink, #E8396A); margin-top: 12px; }
+</style>
+<script>
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
+<script>
+  const enquiryType = document.getElementById('enquiry-type');
+  const formSubject = document.getElementById('form-subject');
+  if (enquiryType && formSubject) {
+    enquiryType.addEventListener('change', function() {
+      formSubject.value = 'Victory Sauce — ' + this.value;
+    });
+  }
+  const contactForm = document.getElementById('contact-form');
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'A enviar…';
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        contactForm.innerHTML = '<p class="form-success">Mensagem enviada — entraremos em contacto em breve.</p>';
+      } else { throw new Error(); }
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'Enviar';
+      const existing = contactForm.querySelector('.form-error');
+      if (!existing) {
+        const err = document.createElement('p');
+        err.className = 'form-error';
+        err.textContent = 'Algo correu mal. Tenta enviar um email diretamente para hello@victorysauce.com.';
+        contactForm.appendChild(err);
+      }
+    }
+  });
+</script>
+</body>
+</html>
