@@ -424,10 +424,12 @@ nav {
 .newsletter-mailerlite { flex: 1; max-width: 400px; }
 
 /* ── FOOTER ── */
+/* ── FOOTER ── */
 footer {
   border-top: 1px solid rgba(255,255,255,0.15);
   padding: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -451,6 +453,15 @@ footer {
   transition: color 0.2s;
 }
 .footer-links a:hover { color: #fff; }
+.footer-legal {
+  flex-basis: 100%;
+  text-align: right;
+  font-family: var(--oswald);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(242,237,227,0.45);
+  margin-top: 16px;
+}
 
 /* ── HAMBURGER ── */
 .nav-hamburger {
